@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — Kim Gutae</title>
+  <title>Portfolio</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -319,6 +319,45 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
     }
+
+    /* ── LINE FLOAT BUTTON ── */
+    .line-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      display: flex; align-items: center; gap: 0;
+      text-decoration: none;
+    }
+    .line-float-label {
+      background: #fff; color: #06C755; font-size: 13px; font-weight: 700;
+      padding: 8px 14px 8px 16px; border-radius: 100px 0 0 100px;
+      border: 2px solid #06C755; border-right: none;
+      white-space: nowrap;
+      opacity: 0; transform: translateX(10px);
+      transition: opacity .25s, transform .25s;
+      pointer-events: none;
+      box-shadow: -4px 0 12px rgba(6,199,85,.1);
+    }
+    .line-float:hover .line-float-label {
+      opacity: 1; transform: translateX(0);
+    }
+    .line-float-btn {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #06C755;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 24px rgba(6,199,85,.45);
+      transition: transform .25s, box-shadow .25s;
+      flex-shrink: 0;
+    }
+    .line-float:hover .line-float-btn {
+      transform: scale(1.08);
+      box-shadow: 0 10px 32px rgba(6,199,85,.6);
+    }
+    .line-float-btn svg { width: 32px; height: 32px; }
+
+    @media (max-width: 640px) {
+      .line-float { bottom: 20px; right: 16px; }
+      .line-float-btn { width: 50px; height: 50px; }
+      .line-float-btn svg { width: 28px; height: 28px; }
+    }
   </style>
 </head>
 <body>
@@ -327,12 +366,12 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo">KG.</div>
+  <div class="logo">K.</div>
   <div class="nav-right">
     <ul>
-      <li><a href="#about"    data-i18n="nav_about"></a></li>
+      <!-- <li><a href="#about"    data-i18n="nav_about"></a></li> -->
       <li><a href="#systems"  data-i18n="nav_systems"></a></li>
-      <li><a href="#websites" data-i18n="nav_websites"></a></li>
+      <!-- <li><a href="#websites" data-i18n="nav_websites"></a></li> -->
       <li><a href="#contact"  data-i18n="nav_contact"></a></li>
     </ul>
     <div class="nav-divider"></div>
@@ -353,7 +392,7 @@
   <p data-i18n="hero_p"></p>
   <div class="hero-stats">
     <div class="stat">
-      <span class="stat-num" data-count="9">0</span>
+      <span class="stat-num" data-count="10">0</span>
       <span class="stat-label" data-i18n="stat_systems"></span>
     </div>
     <div class="stat">
@@ -361,7 +400,7 @@
       <span class="stat-label" data-i18n="stat_websites"></span>
     </div>
     <div class="stat">
-      <span class="stat-num" data-count="13">0</span>
+      <span class="stat-num" data-count="14">0</span>
       <span class="stat-label" data-i18n="stat_total"></span>
     </div>
   </div>
@@ -370,7 +409,7 @@
 <hr class="divider" />
 
 <!-- ABOUT -->
-<section id="about">
+<!-- <section id="about">
   <div class="about-grid">
     <div class="about-left reveal">
       <div class="avatar">KG</div>
@@ -394,7 +433,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <hr class="divider" />
 
@@ -408,13 +447,14 @@
   <div class="grid grid-3">
     <div class="card reveal"><span class="card-num">01</span><div class="card-icon icon-purple">🎫</div><div class="card-title" data-i18n="s1_title"></div><div class="card-desc" data-i18n="s1_desc"></div><div class="card-tags"><span class="tag" data-i18n="t_auto"></span><span class="tag" data-i18n="t_settlement"></span><span class="tag" data-i18n="t_admin"></span></div></div>
     <div class="card reveal"><span class="card-num">02</span><div class="card-icon icon-blue">💬</div><div class="card-title" data-i18n="s2_title"></div><div class="card-desc" data-i18n="s2_desc"></div><div class="card-tags"><span class="tag">LINE</span><span class="tag">Facebook</span><span class="tag pink">Instagram</span><span class="tag green">Mail</span></div></div>
-    <div class="card reveal"><span class="card-num">03</span><div class="card-icon icon-green">🏥</div><div class="card-title" data-i18n="s3_title"></div><div class="card-desc" data-i18n="s3_desc"></div><div class="card-tags"><span class="tag green" data-i18n="t_ai_bot"></span><span class="tag" data-i18n="t_medical"></span><span class="tag" data-i18n="t_auto_reply"></span></div></div>
+    <div class="card reveal"><span class="card-num">03</span><div class="card-icon icon-green">🎙️</div><div class="card-title" data-i18n="s3_title"></div><div class="card-desc" data-i18n="s3_desc"></div><div class="card-tags"><span class="tag green" data-i18n="t_voice"></span><span class="tag green" data-i18n="t_ai_bot"></span><span class="tag" data-i18n="t_medical"></span><span class="tag" data-i18n="t_auto_reply"></span></div></div>
     <div class="card reveal"><span class="card-num">04</span><div class="card-icon icon-orange">📦</div><div class="card-title" data-i18n="s4_title"></div><div class="card-desc" data-i18n="s4_desc"></div><div class="card-tags"><span class="tag" data-i18n="t_realtime"></span><span class="tag" data-i18n="t_report"></span><span class="tag" data-i18n="t_alert"></span></div></div>
     <div class="card reveal"><span class="card-num">05</span><div class="card-icon icon-cyan">📅</div><div class="card-title" data-i18n="s5_title"></div><div class="card-desc" data-i18n="s5_desc"></div><div class="card-tags"><span class="tag" data-i18n="t_schedule"></span><span class="tag" data-i18n="t_notify"></span><span class="tag green">LINE</span><span class="tag" data-i18n="t_marketing"></span></div></div>
     <div class="card reveal"><span class="card-num">06</span><div class="card-icon icon-pink">🇯🇵</div><div class="card-title" data-i18n="s6_title"></div><div class="card-desc" data-i18n="s6_desc"></div><div class="card-tags"><span class="tag pink" data-i18n="t_crossborder"></span><span class="tag" data-i18n="t_auto"></span><span class="tag" data-i18n="t_exchange"></span></div></div>
     <div class="card reveal"><span class="card-num">07</span><div class="card-icon icon-teal">🏢</div><div class="card-title" data-i18n="s7_title"></div><div class="card-desc" data-i18n="s7_desc"></div><div class="card-tags"><span class="tag green" data-i18n="t_realtime"></span><span class="tag">WebSocket</span><span class="tag" data-i18n="t_fileshare"></span></div></div>
     <div class="card reveal"><span class="card-num">08</span><div class="card-icon icon-yellow">⏰</div><div class="card-title" data-i18n="s8_title"></div><div class="card-desc" data-i18n="s8_desc"></div><div class="card-tags"><span class="tag">HR</span><span class="tag" data-i18n="t_shift"></span><span class="tag" data-i18n="t_overtime"></span></div></div>
     <div class="card reveal"><span class="card-num">09</span><div class="card-icon icon-red">🧾</div><div class="card-title" data-i18n="s9_title"></div><div class="card-desc" data-i18n="s9_desc"></div><div class="card-tags"><span class="tag">PDF</span><span class="tag" data-i18n="t_auto_issue"></span><span class="tag pink" data-i18n="t_settlement"></span></div></div>
+    <div class="card reveal"><span class="card-num">10</span><div class="card-icon icon-orange">🚗</div><div class="card-title" data-i18n="s10_title"></div><div class="card-desc" data-i18n="s10_desc"></div><div class="card-tags"><span class="tag pink" data-i18n="t_crossborder"></span><span class="tag" data-i18n="t_stock_sync"></span><span class="tag" data-i18n="t_car_sales"></span></div></div>
   </div>
 </section>
 
@@ -479,13 +519,23 @@
       </div>
     </div>
 
+    <div class="stack-group">
+      <div class="stack-group-label" data-i18n="stack_voice"></div>
+      <div class="stack-pills">
+        <div class="pill"><span class="dot dot-purple"></span>Web Speech API</div>
+        <div class="pill"><span class="dot dot-cyan"></span>STT</div>
+        <div class="pill"><span class="dot dot-teal"></span>TTS</div>
+        <div class="pill"><span class="dot dot-blue"></span>OpenAI API</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <hr class="divider" />
 
 <!-- WEBSITES -->
-<section id="websites">
+<!-- <section id="websites">
   <div class="section-header reveal">
     <div class="section-tag" data-i18n="web_tag"></div>
     <h2 class="section-title" data-i18n="web_title"></h2>
@@ -497,7 +547,7 @@
     <div class="card reveal"><div class="card-icon icon-green">👔</div><div class="card-title" data-i18n="w3_title"></div><div class="card-desc" data-i18n="w3_desc"></div><div class="card-tags"><span class="tag green">HR</span><span class="tag" data-i18n="t_responsive"></span><span class="tag" data-i18n="t_corporate"></span></div></div>
     <div class="card reveal"><div class="card-icon icon-pink">🛍️</div><div class="card-title" data-i18n="w4_title"></div><div class="card-desc" data-i18n="w4_desc"></div><div class="card-tags"><span class="tag pink">Cafe24</span><span class="tag pink" data-i18n="t_ec"></span><span class="tag" data-i18n="t_payment"></span><span class="tag" data-i18n="t_order"></span></div></div>
   </div>
-</section>
+</section> -->
 
 <hr class="divider" />
 
@@ -514,6 +564,16 @@
   </div>
 </section>
 
+<!-- LINE FLOAT BUTTON -->
+<a class="line-float" href="https://line.me/ti/p/~onse101" target="_blank" rel="noopener" aria-label="LINE으로 연락하기">
+  <span class="line-float-label">LINEで連絡する</span>
+  <div class="line-float-btn">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#fff" d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+    </svg>
+  </div>
+</a>
+
 <!-- FOOTER -->
 <footer>
   <p data-i18n="footer"></p>
@@ -524,11 +584,11 @@
 const i18n = {
   ja: {
     nav_about:'About', nav_systems:'システム', nav_websites:'Webサイト', nav_contact:'連絡',
-    hero_badge:'フルスタックエンジニア & システムアーキテクト',
+    hero_badge:'ウェブエンジニア',
     hero_h1:'これまで作ってきたものを、<br><span>ご紹介します</span>',
     hero_p:'バックエンドシステムからユーザー向けWebサービスまで、\n自ら設計・構築したプロジェクトです。',
     stat_systems:'システム構築', stat_websites:'Webサイト開発', stat_total:'総プロジェクト数',
-    about_role:'フルスタックエンジニア',
+    about_role:'ウェブエンジニア',
     about_location:'🇯🇵 日本在住 · 🇰🇷 韓国出身',
     about_bio:'日本と韓国を拠点に、業務システムからWebサービスまで幅広く開発してきました。チャット統合・業務自動化・クロスボーダーECなど、実業務の課題を一人でフロントからバックエンド・インフラまで一気通貫で解決することが得意です。',
     about_h1:'<strong>業務自動化</strong>を得意とし、手作業をなくすシステム設計にこだわります。',
@@ -537,15 +597,16 @@ const i18n = {
     sys_desc:'ビジネス運営に必要な多様なバックオフィス・自動化システムを設計・開発しました。',
     s1_title:'ギフト券買取・管理システム', s1_desc:'ギフト券の買取申請受付から審査・精算・履歴管理まで、全プロセスを自動化したバックオフィスシステム',
     s2_title:'チャット統合ソリューション', s2_desc:'LINE・メール・Facebook・Instagramのメッセージを単一インターフェースで一元管理するオムニチャネルソリューション',
-    s3_title:'医療チャットボット', s3_desc:'患者からの問い合わせ自動対応や症状案内を行う医療機関特化型AIチャットボット',
+    s3_title:'音声医療AIアシスタント', s3_desc:'音声入力をメインとした医療機関特化型AIチャットボット。患者が声で症状を伝えるとAIがリアルタイムで自動応答・案内を行う音声ファーストのシステム',
     s4_title:'在庫管理システム', s4_desc:'入出庫管理、リアルタイム在庫追跡、アラート・レポート自動生成機能を備えた在庫管理システム',
     s5_title:'予約システム', s5_desc:'予約管理・重複防止・通知送信に加え、LINEを活用したマーケティング機能も統合したオンライン予約プラットフォーム',
     s6_title:'日本→韓国 自動出品・販売システム', s6_desc:'日本の各ショッピングモールの商品情報を取得し、韓国のショッピングモールへ自動で出品・販売を行う越境EC自動化システム',
     s7_title:'社内チャットシステム', s7_desc:'チーム・チャンネル単位のリアルタイムメッセージ、ファイル共有、メンション通知に対応した社内専用コミュニケーションツール',
     s8_title:'勤怠・シフト管理システム', s8_desc:'従業員の出退勤記録、シフトスケジュール管理、残業集計を自動化したシステム',
     s9_title:'請求書自動化システム', s9_desc:'取引データに基づく請求書の自動生成、PDF発行、メール送信を行う自動化システム',
-    stack_title:'使用技術', stack_desc:'フロントからインフラまで、一人でフルスタックに対応します。',
-    stack_frontend:'フロントエンド', stack_backend:'バックエンド', stack_db:'データベース', stack_infra:'インフラ', stack_api:'外部API',
+    s10_title:'在庫連携・海外車両販売システム', s10_desc:'他社から在庫データを受け取り、海外マーケットに向けて車両の販売を行うクロスボーダー自動車販売プラットフォーム',
+    stack_title:'使用技術', stack_desc:'フロントからインフラまで、一人で全部対応します。',
+    stack_frontend:'フロントエンド', stack_backend:'バックエンド', stack_db:'データベース', stack_infra:'インフラ', stack_api:'外部API', stack_voice:'音声・AI',
     web_tag:'Websites', web_title:'Webサイト', web_desc:'ブランディングからコンバージョンまで、目的に合わせて設計・開発したWebサービスです。',
     w1_title:'企業紹介サイト', w1_desc:'企業のアイデンティティとサービスを効果的に伝えるコーポレートWebサイト。レスポンシブデザインとSEO最適化を実装',
     w2_title:'ギフト券買取サイト', w2_desc:'ユーザーがギフト券情報を入力すると即座に査定額を確認し、買取申請まで完了できるコンバージョン重視のランディングページ',
@@ -556,10 +617,10 @@ const i18n = {
     contact_desc:'お仕事のご相談や技術的なご質問など、どんなことでもお待ちしています。',
     contact_btn:'メールを送る',
     t_auto:'自動化', t_settlement:'精算', t_admin:'管理画面',
-    t_ai_bot:'AIチャットボット', t_medical:'医療', t_auto_reply:'自動応対',
+    t_voice:'音声入力', t_ai_bot:'AIチャットボット', t_medical:'医療', t_auto_reply:'自動応対',
     t_realtime:'リアルタイム', t_report:'レポート', t_alert:'アラート',
     t_schedule:'スケジューリング', t_notify:'通知', t_calendar:'カレンダー', t_marketing:'マーケティング',
-    t_crossborder:'クロスボーダー', t_exchange:'為替', t_fileshare:'ファイル共有',
+    t_crossborder:'クロスボーダー', t_exchange:'為替', t_fileshare:'ファイル共有', t_stock_sync:'在庫連携', t_car_sales:'海外車両販売',
     t_shift:'シフト', t_overtime:'残業集計', t_auto_issue:'自動発行',
     t_responsive:'レスポンシブ', t_corporate:'コーポレート', t_landing:'ランディング',
     t_instant_quote:'即時査定', t_cta:'CTA最適化', t_matching:'マッチング', t_recruit:'採用',
@@ -568,11 +629,11 @@ const i18n = {
   },
   ko: {
     nav_about:'소개', nav_systems:'시스템', nav_websites:'웹사이트', nav_contact:'연락',
-    hero_badge:'풀스택 개발자 & 시스템 아키텍트',
+    hero_badge:'웹엔지니어',
     hero_h1:'지금까지 만든 것들을<br><span>소개합니다</span>',
     hero_p:'백엔드 시스템부터 사용자 향 웹서비스까지,\n직접 설계하고 구축한 프로젝트들입니다.',
     stat_systems:'시스템 구축', stat_websites:'웹사이트 개발', stat_total:'총 프로젝트',
-    about_role:'풀스택 개발자',
+    about_role:'웹엔지니어',
     about_location:'🇯🇵 일본 거주 · 🇰🇷 한국 출신',
     about_bio:'일본과 한국을 거점으로 업무 시스템부터 웹서비스까지 폭넓게 개발해왔습니다. 채팅 통합, 업무 자동화, 크로스보더 이커머스 등 실무 과제를 프론트부터 백엔드·인프라까지 혼자서 전체를 구축하는 것을 특기로 합니다.',
     about_h1:'<strong>업무 자동화</strong>를 특기로, 수작업을 없애는 시스템 설계를 추구합니다.',
@@ -580,15 +641,16 @@ const i18n = {
     sys_tag:'Systems', sys_title:'구축 시스템', sys_desc:'비즈니스 운영에 필요한 다양한 백오피스 및 자동화 시스템을 설계·개발했습니다.',
     s1_title:'기프트권 매입 및 관리 시스템', s1_desc:'기프트권 매입 신청 접수부터 심사, 정산, 이력 관리까지 전 프로세스를 자동화한 백오피스 시스템',
     s2_title:'채팅 통합 솔루션', s2_desc:'LINE·메일·Facebook·Instagram 메시지를 단일 인터페이스로 통합 관리하는 옴니채널 솔루션',
-    s3_title:'의료 채팅봇', s3_desc:'환자 문의 자동 응대와 증상 안내 기능을 제공하는 의료기관 특화 AI 챗봇 시스템',
+    s3_title:'음성 의료 AI 어시스턴트', s3_desc:'음성 입력을 메인으로 한 의료기관 특화 AI 챗봇. 환자가 목소리로 증상을 전달하면 AI가 실시간으로 자동 안내·응답하는 보이스 퍼스트 시스템',
     s4_title:'재고 시스템', s4_desc:'입·출고 관리, 재고 현황 실시간 추적, 알림 및 리포트 자동 생성 기능을 갖춘 재고 관리 시스템',
     s5_title:'예약 시스템', s5_desc:'예약 관리, 중복 방지, 알림 발송에 더해 LINE을 활용한 마케팅 기능을 통합한 온라인 예약 플랫폼',
     s6_title:'일본→한국 자동 출품·판매 시스템', s6_desc:'일본 각 쇼핑몰의 상품 정보를 수집해 한국 쇼핑몰에 자동으로 등록·판매하는 크로스보더 이커머스 자동화 시스템',
     s7_title:'사내 채팅 시스템', s7_desc:'팀·채널 기반 실시간 메시지, 파일 공유, 멘션 알림을 지원하는 사내 전용 커뮤니케이션 툴',
     s8_title:'출퇴근 / 시프트 시스템', s8_desc:'직원 출퇴근 기록, 시프트 스케줄 배정, 초과근무 집계를 자동화한 시스템',
     s9_title:'청구서 자동화 시스템', s9_desc:'거래 데이터 기반 청구서 자동 생성, PDF 발행, 이메일 발송을 자동화한 시스템',
-    stack_title:'기술 스택', stack_desc:'프론트부터 인프라까지, 혼자서 풀스택으로 대응합니다.',
-    stack_frontend:'프론트엔드', stack_backend:'백엔드', stack_db:'데이터베이스', stack_infra:'인프라', stack_api:'외부 API',
+    s10_title:'재고 연동 해외 차량 판매 시스템', s10_desc:'타사로부터 재고 데이터를 받아 해외 시장에 차량을 판매하는 크로스보더 자동차 판매 플랫폼',
+    stack_title:'기술 스택', stack_desc:'프론트부터 인프라까지, 혼자서 모두 대응합니다.',
+    stack_frontend:'프론트엔드', stack_backend:'백엔드', stack_db:'데이터베이스', stack_infra:'인프라', stack_api:'외부 API', stack_voice:'음성 · AI',
     web_tag:'Websites', web_title:'웹사이트', web_desc:'브랜딩부터 전환까지, 목적에 맞게 설계·개발한 웹서비스입니다.',
     w1_title:'회사 소개 사이트', w1_desc:'기업 아이덴티티와 서비스를 효과적으로 전달하는 코퍼레이트 웹사이트. 반응형 디자인과 SEO 최적화 적용',
     w2_title:'기프트권 매입 사이트', w2_desc:'사용자가 기프트권 정보를 입력하면 즉시 견적을 확인하고 매입 신청까지 완료할 수 있는 전환 중심 랜딩 페이지',
@@ -599,10 +661,10 @@ const i18n = {
     contact_desc:'업무 상담이나 기술적인 질문 등 어떤 내용이든 환영합니다.',
     contact_btn:'이메일 보내기',
     t_auto:'자동화', t_settlement:'정산', t_admin:'관리자',
-    t_ai_bot:'AI 챗봇', t_medical:'의료', t_auto_reply:'자동응대',
+    t_voice:'음성입력', t_ai_bot:'AI 챗봇', t_medical:'의료', t_auto_reply:'자동응대',
     t_realtime:'실시간', t_report:'리포트', t_alert:'알림',
     t_schedule:'스케줄링', t_notify:'알림', t_calendar:'캘린더', t_marketing:'마케팅',
-    t_crossborder:'크로스보더', t_exchange:'환율', t_fileshare:'파일공유',
+    t_crossborder:'크로스보더', t_exchange:'환율', t_fileshare:'파일공유', t_stock_sync:'재고연동', t_car_sales:'해외차량판매',
     t_shift:'스케줄', t_overtime:'초과근무 집계', t_auto_issue:'자동발행',
     t_responsive:'반응형', t_corporate:'코퍼레이트', t_landing:'랜딩페이지',
     t_instant_quote:'즉시견적', t_cta:'CTA최적화', t_matching:'매칭', t_recruit:'채용',
