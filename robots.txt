@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gutae.dev/sitemap.xml
+Sitemap: https://www.gutae.dev/sitemap.xml
