@@ -3,7 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <title>堺市・大阪の中小企業向けWebシステム制作｜Kim Gutae フルスタックエンジニア</title>
+  <meta name="description" content="大阪府堺市を拠点に、中小企業向けWebシステム制作・業務自動化を行うフルスタックエンジニア。チャット統合・在庫管理・予約システムなど、実際に構築した10件の事例を公開中。" />
+  <meta name="keywords" content="中小企業 Webシステム制作, 堺市 Web開発, 大阪 システム開発, 業務自動化, フルスタックエンジニア" />
+  <link rel="canonical" href="https://gutae.dev/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gutae.dev/" />
+  <meta property="og:title" content="堺市・大阪の中小企業向けWebシステム制作｜Kim Gutae" />
+  <meta property="og:description" content="大阪府堺市を拠点に、中小企業向けWebシステム制作・業務自動化を行うフルスタックエンジニア。実際に構築した10件のシステム事例を公開中。" />
+  <meta property="og:image" content="https://gutae.dev/images/service1.jpg" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="堺市・大阪の中小企業向けWebシステム制作｜Kim Gutae" />
+  <meta name="twitter:description" content="大阪府堺市を拠点に、中小企業向けWebシステム制作・業務自動化を行うフルスタックエンジニア。" />
+  <meta name="twitter:image" content="https://gutae.dev/images/service1.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Kim Gutae - Webシステム制作",
+    "url": "https://gutae.dev/",
+    "image": "https://gutae.dev/images/service1.jpg",
+    "email": "ggutae0@gmail.com",
+    "description": "大阪府堺市を拠点に、中小企業向けのWebシステム制作・業務自動化を行うフルスタックエンジニア。",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "堺市",
+      "addressRegion": "大阪府",
+      "addressCountry": "JP"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "堺市" },
+      { "@type": "AdministrativeArea", "name": "大阪府" },
+      { "@type": "Country", "name": "Japan" }
+    ],
+    "sameAs": [
+      "https://line.me/ti/p/~onse101",
+      "https://open.kakao.com/o/pycMGIui"
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -15,7 +59,7 @@
       --accent2: #ff6584;
       --accent3: #43e97b;
       --text: #e8e8f0;
-      --muted: #7a7a9a;
+      --muted: #b6b6cf;
       --radius: 16px;
     }
 
@@ -370,7 +414,7 @@
   <div class="logo">K.</div>
   <div class="nav-right">
     <ul>
-      <!-- <li><a href="#about"    data-i18n="nav_about"></a></li> -->
+      <li><a href="#about"    data-i18n="nav_about"></a></li>
       <li><a href="#systems"  data-i18n="nav_systems"></a></li>
       <!-- <li><a href="#websites" data-i18n="nav_websites"></a></li> -->
       <li><a href="#contact"  data-i18n="nav_contact"></a></li>
@@ -409,8 +453,25 @@
 
 <hr class="divider" />
 
+<!-- PAIN POINTS -->
+<section id="pain">
+  <div class="section-header reveal">
+    <div class="section-tag" data-i18n="pain_tag"></div>
+    <h2 class="section-title" data-i18n="pain_title"></h2>
+    <p class="section-desc" data-i18n="pain_desc"></p>
+  </div>
+  <div class="grid grid-3">
+    <div class="card reveal"><div class="card-icon icon-orange">🧾</div><div class="card-desc" data-i18n="pain1"></div></div>
+    <div class="card reveal"><div class="card-icon icon-pink">💸</div><div class="card-desc" data-i18n="pain2"></div></div>
+    <div class="card reveal"><div class="card-icon icon-blue">🧩</div><div class="card-desc" data-i18n="pain3"></div></div>
+    <div class="card reveal"><div class="card-icon icon-teal">🌏</div><div class="card-desc" data-i18n="pain4"></div></div>
+  </div>
+</section>
+
+<hr class="divider" />
+
 <!-- ABOUT -->
-<!-- <section id="about">
+<section id="about">
   <div class="about-grid">
     <div class="about-left reveal">
       <div class="avatar">KG</div>
@@ -434,7 +495,7 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 <hr class="divider" />
 
@@ -452,17 +513,15 @@
     <div class="card reveal"><span class="card-num">04</span><div class="card-icon icon-orange">📦</div><div class="card-title" data-i18n="s4_title"></div><div class="card-desc" data-i18n="s4_desc"></div><div class="card-tags"><span class="tag" data-i18n="t_realtime"></span><span class="tag" data-i18n="t_report"></span><span class="tag" data-i18n="t_alert"></span></div></div>
     <div class="card reveal"><span class="card-num">05</span><div class="card-icon icon-cyan">📅</div><div class="card-title" data-i18n="s5_title"></div><div class="card-desc" data-i18n="s5_desc"></div><div class="card-tags"><span class="tag" data-i18n="t_schedule"></span><span class="tag" data-i18n="t_notify"></span><span class="tag green">LINE</span><span class="tag" data-i18n="t_marketing"></span></div></div>
     <div class="card reveal"><span class="card-num">06</span><div class="card-icon icon-pink">🇯🇵</div><div class="card-title" data-i18n="s6_title"></div><div class="card-desc" data-i18n="s6_desc"></div><div class="card-tags"><span class="tag pink" data-i18n="t_crossborder"></span><span class="tag" data-i18n="t_auto"></span><span class="tag" data-i18n="t_exchange"></span></div></div>
-    <div class="card reveal"><span class="card-num">07</span><div class="card-icon icon-teal">🏢</div><div class="card-title" data-i18n="s7_title"></div><div class="card-desc" data-i18n="s7_desc"></div><div class="card-tags"><span class="tag green" data-i18n="t_realtime"></span><span class="tag">WebSocket</span><span class="tag" data-i18n="t_fileshare"></span></div></div>
+    <div class="card reveal"><span class="card-num">07</span><div class="card-icon icon-teal">🏢</div><div class="card-title" data-i18n="s7_title"></div><div class="card-desc" data-i18n="s7_desc"></div><div class="card-tags"><span class="tag green" data-i18n="t_realtime"></span><span class="tag" data-i18n="t_mention"></span><span class="tag" data-i18n="t_fileshare"></span></div></div>
     <div class="card reveal"><span class="card-num">08</span><div class="card-icon icon-yellow">⏰</div><div class="card-title" data-i18n="s8_title"></div><div class="card-desc" data-i18n="s8_desc"></div><div class="card-tags"><span class="tag">HR</span><span class="tag" data-i18n="t_shift"></span><span class="tag" data-i18n="t_overtime"></span></div></div>
     <div class="card reveal"><span class="card-num">09</span><div class="card-icon icon-red">🧾</div><div class="card-title" data-i18n="s9_title"></div><div class="card-desc" data-i18n="s9_desc"></div><div class="card-tags"><span class="tag">PDF</span><span class="tag" data-i18n="t_auto_issue"></span><span class="tag pink" data-i18n="t_settlement"></span></div></div>
     <div class="card reveal"><span class="card-num">10</span><div class="card-icon icon-orange">🚗</div><div class="card-title" data-i18n="s10_title"></div><div class="card-desc" data-i18n="s10_desc"></div><div class="card-tags"><span class="tag pink" data-i18n="t_crossborder"></span><span class="tag" data-i18n="t_stock_sync"></span><span class="tag" data-i18n="t_car_sales"></span></div></div>
   </div>
 </section>
 
-<hr class="divider" />
-
 <!-- TECH STACK -->
-<section id="stack">
+<!-- <section id="stack">
   <div class="section-header reveal">
     <div class="section-tag">Tech Stack</div>
     <h2 class="section-title" data-i18n="stack_title"></h2>
@@ -531,9 +590,7 @@
     </div>
 
   </div>
-</section>
-
-<hr class="divider" />
+</section> -->
 
 <!-- WEBSITES -->
 <!-- <section id="websites">
@@ -585,17 +642,23 @@
 const i18n = {
   ja: {
     nav_about:'About', nav_systems:'システム', nav_websites:'Webサイト', nav_contact:'連絡',
-    hero_badge:'ウェブエンジニア',
+    hero_badge:'大阪・堺市のウェブエンジニア',
     hero_h1:'これまで作ってきたものを、<br><span>ご紹介します</span>',
-    hero_p:'バックエンドシステムからユーザー向けWebサービスまで、\n自ら設計・構築したプロジェクトです。',
+    hero_p:'大阪・堺市を拠点に、中小企業の「面倒な手作業」をシステムで解決しています。\nこれまで実際にお客様のために設計・構築してきたシステムをご紹介します。',
     stat_systems:'システム構築', stat_websites:'Webサイト開発', stat_total:'総プロジェクト数',
+    pain_tag:'Pain Points', pain_title:'こんなお悩み、ありませんか？',
+    pain_desc:'一つでも当てはまれば、お気軽にご相談ください。',
+    pain1:'人を雇うほどコストはかけられないけど、エクセルや手作業の管理はもう限界…',
+    pain2:'システム会社に相談したら、見積もりが高すぎて諦めた',
+    pain3:'市販のソフトやサービスでは、自社の業務にちょうど合わない',
+    pain4:'日本と韓国、両方の業務に対応できる人が見つからない',
     about_role:'ウェブエンジニア',
-    about_location:'🇯🇵 日本在住 · 🇰🇷 韓国出身',
-    about_bio:'日本と韓国を拠点に、業務システムからWebサービスまで幅広く開発してきました。チャット統合・業務自動化・クロスボーダーECなど、実業務の課題を一人でフロントからバックエンド・インフラまで一気通貫で解決することが得意です。',
+    about_location:'🇯🇵 大阪府堺市 在住 · 🇰🇷 韓国出身',
+    about_bio:'大阪府堺市を拠点に、中小企業向けのWebシステム開発・業務自動化を行っています。チャット管理の効率化や業務フローの自動化、海外販売向けシステムの構築など、企画・開発・運用まで一人で責任を持って対応いたします。',
     about_h1:'<strong>業務自動化</strong>を得意とし、手作業をなくすシステム設計にこだわります。',
-    about_h3:'小さなチームでも<strong>すばやくリリース</strong>できる、スケーラブルな構成を意識しています。',
+    about_h3:'小さなチームでも<strong>すぐに使い始められる</strong>、無理なく長く使える仕組みを意識しています。',
     sys_tag:'Systems', sys_title:'構築システム',
-    sys_desc:'ビジネス運営に必要な多様なバックオフィス・自動化システムを設計・開発しました。',
+    sys_desc:'<br/>ビジネス運営に必要な多様なバックオフィス・自動化システムを設計・開発しました。\n<span style="font-size:13px;opacity:.85;">🔒 社内システムのため、セキュリティ上の理由から画面写真は公開しておりません。</span>',
     s1_title:'ギフト券買取・管理システム', s1_desc:'ギフト券の買取申請受付から審査・精算・履歴管理まで、全プロセスを自動化したバックオフィスシステム',
     s2_title:'チャット統合ソリューション', s2_desc:'LINE・メール・Facebook・Instagramのメッセージを単一インターフェースで一元管理するオムニチャネルソリューション',
     s3_title:'音声医療AIアシスタント', s3_desc:'音声入力をメインとした医療機関特化型AIチャットボット。患者が声で症状を伝えるとAIがリアルタイムで自動応答・案内を行う音声ファーストのシステム',
@@ -606,7 +669,7 @@ const i18n = {
     s8_title:'勤怠・シフト管理システム', s8_desc:'従業員の出退勤記録、シフトスケジュール管理、残業集計を自動化したシステム',
     s9_title:'請求書自動化システム', s9_desc:'取引データに基づく請求書の自動生成、PDF発行、メール送信を行う自動化システム',
     s10_title:'在庫連携・海外車両販売システム', s10_desc:'他社から在庫データを受け取り、海外マーケットに向けて車両の販売を行うクロスボーダー自動車販売プラットフォーム',
-    stack_title:'使用技術', stack_desc:'フロントからインフラまで、一人で全部対応します。',
+    stack_title:'使用技術', stack_desc:'企画から完成・運用まで、一人で全部対応します。',
     stack_frontend:'フロントエンド', stack_backend:'バックエンド', stack_db:'データベース', stack_infra:'インフラ', stack_api:'外部API', stack_voice:'音声・AI',
     web_tag:'Websites', web_title:'Webサイト', web_desc:'ブランディングからコンバージョンまで、目的に合わせて設計・開発したWebサービスです。',
     w1_title:'企業紹介サイト', w1_desc:'企業のアイデンティティとサービスを効果的に伝えるコーポレートWebサイト。レスポンシブデザインとSEO最適化を実装',
@@ -621,25 +684,31 @@ const i18n = {
     t_voice:'音声入力', t_ai_bot:'AIチャットボット', t_medical:'医療', t_auto_reply:'自動応対',
     t_realtime:'リアルタイム', t_report:'レポート', t_alert:'アラート',
     t_schedule:'スケジューリング', t_notify:'通知', t_calendar:'カレンダー', t_marketing:'マーケティング',
-    t_crossborder:'クロスボーダー', t_exchange:'為替', t_fileshare:'ファイル共有', t_stock_sync:'在庫連携', t_car_sales:'海外車両販売',
+    t_crossborder:'クロスボーダー', t_exchange:'為替', t_fileshare:'ファイル共有', t_mention:'メンション通知', t_stock_sync:'在庫連携', t_car_sales:'海外車両販売',
     t_shift:'シフト', t_overtime:'残業集計', t_auto_issue:'自動発行',
     t_responsive:'レスポンシブ', t_corporate:'コーポレート', t_landing:'ランディング',
     t_instant_quote:'即時査定', t_cta:'CTA最適化', t_matching:'マッチング', t_recruit:'採用',
     t_ec:'EC', t_payment:'決済連携', t_order:'注文管理',
-    footer:'© 2026 Kim Gutae · Full-Stack Developer',
+    footer:'© 2026 Kim Gutae',
   },
   ko: {
     nav_about:'소개', nav_systems:'시스템', nav_websites:'웹사이트', nav_contact:'연락',
-    hero_badge:'웹엔지니어',
+    hero_badge:'오사카·사카이 웹엔지니어',
     hero_h1:'지금까지 만든 것들을<br><span>소개합니다</span>',
-    hero_p:'백엔드 시스템부터 사용자 향 웹서비스까지,\n직접 설계하고 구축한 프로젝트들입니다.',
+    hero_p:'오사카·사카이를 거점으로, 중소기업의 \'반복되는 수작업\'을 시스템으로 해결하고 있습니다.\n지금까지 실제 고객을 위해 설계하고 구축한 시스템들을 소개합니다.',
     stat_systems:'시스템 구축', stat_websites:'웹사이트 개발', stat_total:'총 프로젝트',
+    pain_tag:'Pain Points', pain_title:'이런 고민 있으신가요?',
+    pain_desc:'하나라도 해당된다면 편하게 연락주세요.',
+    pain1:'개발자를 고용할 비용은 부담스러운데, 엑셀이나 수작업 관리는 이제 한계예요',
+    pain2:'시스템 회사에 견적을 받아봤는데 너무 비싸서 포기했어요',
+    pain3:'시중 솔루션은 우리 업무에 딱 맞지 않아요',
+    pain4:'일본과 한국, 양쪽 업무를 모두 처리할 사람을 찾기 힘들어요',
     about_role:'웹엔지니어',
-    about_location:'🇯🇵 일본 거주 · 🇰🇷 한국 출신',
-    about_bio:'일본과 한국을 거점으로 업무 시스템부터 웹서비스까지 폭넓게 개발해왔습니다. 채팅 통합, 업무 자동화, 크로스보더 이커머스 등 실무 과제를 프론트부터 백엔드·인프라까지 혼자서 전체를 구축하는 것을 특기로 합니다.',
+    about_location:'🇯🇵 오사카 사카이시 거주 · 🇰🇷 한국 출신',
+    about_bio:'오사카 사카이시를 거점으로 중소기업을 위한 웹시스템개발·업무자동화를 진행하고 있습니다. 채팅 관리의 효율화, 업무 플로우 자동화, 해외 판매용 시스템 구축 등 기획·개발·운영까지 혼자서 책임지고 대응합니다.',
     about_h1:'<strong>업무 자동화</strong>를 특기로, 수작업을 없애는 시스템 설계를 추구합니다.',
-    about_h3:'소규모 팀에서도 <strong>빠르게 출시</strong>할 수 있는 확장 가능한 구성을 지향합니다.',
-    sys_tag:'Systems', sys_title:'구축 시스템', sys_desc:'비즈니스 운영에 필요한 다양한 백오피스 및 자동화 시스템을 설계·개발했습니다.',
+    about_h3:'소규모 팀에서도 <strong>바로 사용할 수 있는</strong>, 무리 없이 오래 쓸 수 있는 시스템을 만듭니다.',
+    sys_tag:'Systems', sys_title:'구축 시스템', sys_desc:'<br/> 비즈니스 운영에 필요한 다양한 백오피스 및 자동화 시스템을 설계·개발했습니다.\n<span style="font-size:13px;opacity:.85;">🔒 사내 시스템 특성상 보안상의 이유로 화면 캡처는 공개하지 않습니다.</span>',
     s1_title:'기프트권 매입 및 관리 시스템', s1_desc:'기프트권 매입 신청 접수부터 심사, 정산, 이력 관리까지 전 프로세스를 자동화한 백오피스 시스템',
     s2_title:'채팅 통합 솔루션', s2_desc:'LINE·메일·Facebook·Instagram 메시지를 단일 인터페이스로 통합 관리하는 옴니채널 솔루션',
     s3_title:'음성 의료 AI 어시스턴트', s3_desc:'음성 입력을 메인으로 한 의료기관 특화 AI 챗봇. 환자가 목소리로 증상을 전달하면 AI가 실시간으로 자동 안내·응답하는 보이스 퍼스트 시스템',
@@ -650,7 +719,7 @@ const i18n = {
     s8_title:'출퇴근 / 시프트 시스템', s8_desc:'직원 출퇴근 기록, 시프트 스케줄 배정, 초과근무 집계를 자동화한 시스템',
     s9_title:'청구서 자동화 시스템', s9_desc:'거래 데이터 기반 청구서 자동 생성, PDF 발행, 이메일 발송을 자동화한 시스템',
     s10_title:'재고 연동 해외 차량 판매 시스템', s10_desc:'타사로부터 재고 데이터를 받아 해외 시장에 차량을 판매하는 크로스보더 자동차 판매 플랫폼',
-    stack_title:'기술 스택', stack_desc:'프론트부터 인프라까지, 혼자서 모두 대응합니다.',
+    stack_title:'기술 스택', stack_desc:'기획부터 완성·운영까지, 혼자서 모두 대응합니다.',
     stack_frontend:'프론트엔드', stack_backend:'백엔드', stack_db:'데이터베이스', stack_infra:'인프라', stack_api:'외부 API', stack_voice:'음성 · AI',
     web_tag:'Websites', web_title:'웹사이트', web_desc:'브랜딩부터 전환까지, 목적에 맞게 설계·개발한 웹서비스입니다.',
     w1_title:'회사 소개 사이트', w1_desc:'기업 아이덴티티와 서비스를 효과적으로 전달하는 코퍼레이트 웹사이트. 반응형 디자인과 SEO 최적화 적용',
@@ -665,12 +734,12 @@ const i18n = {
     t_voice:'음성입력', t_ai_bot:'AI 챗봇', t_medical:'의료', t_auto_reply:'자동응대',
     t_realtime:'실시간', t_report:'리포트', t_alert:'알림',
     t_schedule:'스케줄링', t_notify:'알림', t_calendar:'캘린더', t_marketing:'마케팅',
-    t_crossborder:'크로스보더', t_exchange:'환율', t_fileshare:'파일공유', t_stock_sync:'재고연동', t_car_sales:'해외차량판매',
+    t_crossborder:'크로스보더', t_exchange:'환율', t_fileshare:'파일공유', t_mention:'멘션 알림', t_stock_sync:'재고연동', t_car_sales:'해외차량판매',
     t_shift:'스케줄', t_overtime:'초과근무 집계', t_auto_issue:'자동발행',
     t_responsive:'반응형', t_corporate:'코퍼레이트', t_landing:'랜딩페이지',
     t_instant_quote:'즉시견적', t_cta:'CTA최적화', t_matching:'매칭', t_recruit:'채용',
     t_ec:'이커머스', t_payment:'결제연동', t_order:'주문관리',
-    footer:'© 2026 Kim Gutae · Full-Stack Developer',
+    footer:'© 2026 Kim Gutae',
   }
 };
 
