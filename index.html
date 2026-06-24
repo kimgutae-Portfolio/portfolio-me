@@ -54,6 +54,23 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "開発期間はどれくらいかかりますか？", "acceptedAnswer": { "@type": "Answer", "text": "システムの規模により異なりますが、シンプルな業務システムで2〜4週間、複雑な統合システムで1〜3ヶ月程度が目安です。ご相談時にヒアリングしたうえで、具体的なスケジュールをご提示します。" } },
+      { "@type": "Question", "name": "料金はどのくらいですか？", "acceptedAnswer": { "@type": "Answer", "text": "機能や規模によって大きく変わるため、まずは無料でご相談・お見積りを行っています。要件をヒアリングした上で、明確な金額をご提示しますので、まずはお気軽にご連絡ください。" } },
+      { "@type": "Question", "name": "堺市・大阪以外の地域でも対応可能ですか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、可能です。オンラインでのヒアリング・打ち合わせに対応しており、全国どこからでもご依頼いただけます。" } },
+      { "@type": "Question", "name": "どのような業種・業務に対応していますか？", "acceptedAnswer": { "@type": "Answer", "text": "在庫管理、予約システム、チャット統合、請求書発行、勤怠管理など、業種を問わず手作業が多くて困っている業務全般に対応しています。" } },
+      { "@type": "Question", "name": "システム導入後の保守・サポートはありますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、納品後の運用サポート・保守・追加機能の開発にも対応しています。契約内容に応じてサポート体制をご用意します。" } },
+      { "@type": "Question", "name": "既存の業務フローやエクセル管理からの移行は可能ですか？", "acceptedAnswer": { "@type": "Answer", "text": "もちろん可能です。現在お使いのエクセルや既存システムの内容をヒアリングし、業務を止めずに移行できるよう設計いたします。" } },
+      { "@type": "Question", "name": "個人エンジニアに依頼するのは不安なのですが、大丈夫でしょうか？", "acceptedAnswer": { "@type": "Answer", "text": "企画・設計・開発・運用まで一人で担当しているため、伝達ミスや余分な調整コストが発生せず、スピーディーかつ柔軟に対応できる点が強みです。実際に10件以上のシステムを稼働させてきた実績があります。" } },
+      { "@type": "Question", "name": "相談する際、何を準備すればいいですか？", "acceptedAnswer": { "@type": "Answer", "text": "特別な準備は不要です。今困っていることと理想の状態をざっくりお伝えいただくだけで構いません。詳細はヒアリングしながら一緒に整理していきます。" } }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -285,6 +302,26 @@
     .icon-yellow { background: rgba(250,204,21,.12); }
     .icon-teal   { background: rgba(45,212,191,.12); }
 
+    /* ── SHOW MORE ── */
+    .show-more-wrap { display: none; justify-content: center; margin-top: 28px; }
+    .show-more-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 28px; border-radius: 100px;
+      background: var(--card); border: 1px solid var(--border);
+      color: var(--text); font-size: 14px; font-weight: 700;
+      cursor: pointer; font-family: inherit;
+      transition: border-color .2s, transform .2s;
+    }
+    .show-more-btn:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .show-more-btn svg { width: 16px; height: 16px; transition: transform .3s; }
+    .show-more-btn.expanded svg { transform: rotate(180deg); }
+
+    @media (max-width: 640px) {
+      #systemsGrid .card:nth-child(n+5) { display: none; }
+      #systemsGrid.expanded .card:nth-child(n+5) { display: block; }
+      .show-more-wrap { display: flex; }
+    }
+
     /* ── TECH STACK ── */
     .stack-groups { display: flex; flex-direction: column; gap: 28px; }
     .stack-group {}
@@ -310,6 +347,20 @@
     .dot-red    { background: #f87171; }
     .dot-teal   { background: #2dd4bf; }
 
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: border-color .25s; }
+    .faq-item.open { border-color: var(--accent); }
+    .faq-q {
+      width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 20px 24px; background: transparent; border: none; cursor: pointer; text-align: left;
+      font-family: inherit; font-size: 15px; font-weight: 700; color: var(--text);
+    }
+    .faq-q-icon { flex-shrink: 0; width: 22px; height: 22px; color: var(--accent); transition: transform .3s; }
+    .faq-item.open .faq-q-icon { transform: rotate(45deg); }
+    .faq-a-wrap { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+    .faq-a { padding: 0 24px 20px; font-size: 14px; color: var(--muted); line-height: 1.8; }
+
     /* ── CONTACT ── */
     .contact-wrap {
       display: flex; flex-direction: column; align-items: center;
@@ -333,6 +384,9 @@
     .contact-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(108,99,255,.45); }
     .contact-btn:active { transform: translateY(0); }
     .contact-btn svg { width: 18px; height: 18px; }
+    .contact-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .contact-btn-line { background: #06C755; box-shadow: 0 8px 32px rgba(6,199,85,.3); }
+    .contact-btn-line:hover { box-shadow: 0 16px 48px rgba(6,199,85,.45); }
     .contact-links { display: flex; gap: 16px; margin-top: 4px; }
     .contact-link {
       display: inline-flex; align-items: center; gap: 7px;
@@ -423,6 +477,7 @@
       <li><a href="#about"    data-i18n="nav_about"></a></li>
       <li><a href="#systems"  data-i18n="nav_systems"></a></li>
       <!-- <li><a href="#websites" data-i18n="nav_websites"></a></li> -->
+      <li><a href="#faq"      data-i18n="nav_faq"></a></li>
       <li><a href="#contact"  data-i18n="nav_contact"></a></li>
     </ul>
     <div class="nav-divider"></div>
@@ -512,7 +567,7 @@
     <h2 class="section-title" data-i18n="sys_title"></h2>
     <p class="section-desc" data-i18n="sys_desc"></p>
   </div>
-  <div class="grid grid-3">
+  <div class="grid grid-3" id="systemsGrid">
     <div class="card reveal"><span class="card-num">01</span><div class="card-icon icon-purple">🎫</div><div class="card-title" data-i18n="s1_title"></div><div class="card-desc" data-i18n="s1_desc"></div><div class="card-tags"><span class="tag" data-i18n="t_auto"></span><span class="tag" data-i18n="t_settlement"></span><span class="tag" data-i18n="t_admin"></span></div></div>
     <div class="card reveal"><span class="card-num">02</span><div class="card-icon icon-blue">💬</div><div class="card-title" data-i18n="s2_title"></div><div class="card-desc" data-i18n="s2_desc"></div><div class="card-tags"><span class="tag">LINE</span><span class="tag">Facebook</span><span class="tag pink">Instagram</span><span class="tag green">Mail</span></div></div>
     <div class="card reveal"><span class="card-num">03</span><div class="card-icon icon-green">🎙️</div><div class="card-title" data-i18n="s3_title"></div><div class="card-desc" data-i18n="s3_desc"></div><div class="card-tags"><span class="tag green" data-i18n="t_voice"></span><span class="tag green" data-i18n="t_ai_bot"></span><span class="tag" data-i18n="t_medical"></span><span class="tag" data-i18n="t_auto_reply"></span></div></div>
@@ -523,6 +578,12 @@
     <div class="card reveal"><span class="card-num">08</span><div class="card-icon icon-yellow">⏰</div><div class="card-title" data-i18n="s8_title"></div><div class="card-desc" data-i18n="s8_desc"></div><div class="card-tags"><span class="tag">HR</span><span class="tag" data-i18n="t_shift"></span><span class="tag" data-i18n="t_overtime"></span></div></div>
     <div class="card reveal"><span class="card-num">09</span><div class="card-icon icon-red">🧾</div><div class="card-title" data-i18n="s9_title"></div><div class="card-desc" data-i18n="s9_desc"></div><div class="card-tags"><span class="tag">PDF</span><span class="tag" data-i18n="t_auto_issue"></span><span class="tag pink" data-i18n="t_settlement"></span></div></div>
     <div class="card reveal"><span class="card-num">10</span><div class="card-icon icon-orange">🚗</div><div class="card-title" data-i18n="s10_title"></div><div class="card-desc" data-i18n="s10_desc"></div><div class="card-tags"><span class="tag pink" data-i18n="t_crossborder"></span><span class="tag" data-i18n="t_stock_sync"></span><span class="tag" data-i18n="t_car_sales"></span></div></div>
+  </div>
+  <div class="show-more-wrap">
+    <button class="show-more-btn" id="systemsMoreBtn" type="button">
+      <span id="systemsMoreLabel"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
   </div>
 </section>
 
@@ -615,16 +676,69 @@
 
 <hr class="divider" />
 
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-header reveal">
+    <div class="section-tag" data-i18n="faq_tag"></div>
+    <h2 class="section-title" data-i18n="faq_title"></h2>
+    <p class="section-desc" data-i18n="faq_desc"></p>
+  </div>
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <button class="faq-q" type="button"><span data-i18n="faq1_q"></span><svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+      <div class="faq-a-wrap"><div class="faq-a" data-i18n="faq1_a"></div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button"><span data-i18n="faq2_q"></span><svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+      <div class="faq-a-wrap"><div class="faq-a" data-i18n="faq2_a"></div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button"><span data-i18n="faq3_q"></span><svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+      <div class="faq-a-wrap"><div class="faq-a" data-i18n="faq3_a"></div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button"><span data-i18n="faq4_q"></span><svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+      <div class="faq-a-wrap"><div class="faq-a" data-i18n="faq4_a"></div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button"><span data-i18n="faq5_q"></span><svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+      <div class="faq-a-wrap"><div class="faq-a" data-i18n="faq5_a"></div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button"><span data-i18n="faq6_q"></span><svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+      <div class="faq-a-wrap"><div class="faq-a" data-i18n="faq6_a"></div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button"><span data-i18n="faq7_q"></span><svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+      <div class="faq-a-wrap"><div class="faq-a" data-i18n="faq7_a"></div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button"><span data-i18n="faq8_q"></span><svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+      <div class="faq-a-wrap"><div class="faq-a" data-i18n="faq8_a"></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-wrap reveal">
     <div class="section-tag" data-i18n="contact_tag"></div>
     <h2 class="contact-title" data-i18n="contact_title"></h2>
     <p class="contact-desc" data-i18n="contact_desc"></p>
-    <a class="contact-btn" href="mailto:ggutae0@gmail.com">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      <span data-i18n="contact_btn"></span>
-    </a>
+    <div class="contact-actions">
+      <a class="contact-btn" href="mailto:ggutae0@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span data-i18n="contact_btn"></span>
+      </a>
+      <a class="contact-btn contact-btn-line" href="https://line.me/ti/p/~onse101" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#fff" d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+        </svg>
+        <span data-i18n="contact_btn_line"></span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -647,7 +761,7 @@
 /* ── i18n ── */
 const i18n = {
   ja: {
-    nav_about:'About', nav_systems:'システム', nav_websites:'Webサイト', nav_contact:'連絡',
+    nav_about:'About', nav_systems:'システム', nav_websites:'Webサイト', nav_faq:'よくある質問', nav_contact:'連絡',
     hero_badge:'大阪・堺市のウェブエンジニア',
     hero_h1:'これまで作ってきたものを、<br><span>ご紹介します</span>',
     hero_p:'大阪・堺市を拠点に、中小企業の「面倒な手作業」をシステムで解決しています。\nこれまで実際にお客様のために設計・構築してきたシステムをご紹介します。',
@@ -675,6 +789,7 @@ const i18n = {
     s8_title:'勤怠・シフト管理システム', s8_desc:'従業員の出退勤記録、シフトスケジュール管理、残業集計を自動化したシステム',
     s9_title:'請求書自動化システム', s9_desc:'取引データに基づく請求書の自動生成、PDF発行、メール送信を行う自動化システム',
     s10_title:'在庫連携・海外車両販売システム', s10_desc:'他社から在庫データを受け取り、海外マーケットに向けて車両の販売を行うクロスボーダー自動車販売プラットフォーム',
+    sys_more:'もっと見る', sys_less:'閉じる',
     stack_title:'使用技術', stack_desc:'企画から完成・運用まで、一人で全部対応します。',
     stack_frontend:'フロントエンド', stack_backend:'バックエンド', stack_db:'データベース', stack_infra:'インフラ', stack_api:'外部API', stack_voice:'音声・AI',
     web_tag:'Websites', web_title:'Webサイト', web_desc:'ブランディングからコンバージョンまで、目的に合わせて設計・開発したWebサービスです。',
@@ -682,10 +797,29 @@ const i18n = {
     w2_title:'ギフト券買取サイト', w2_desc:'ユーザーがギフト券情報を入力すると即座に査定額を確認し、買取申請まで完了できるコンバージョン重視のランディングページ',
     w3_title:'人材紹介サイト', w3_desc:'求職者と企業の双方に向けて、サービス内容をわかりやすく紹介するシンプルな人材紹介サイト',
     w4_title:'ショッピングモールサイト', w4_desc:'ECプラットフォーム「Cafe24」を活用して構築した、商品陳列・カート・決済・注文管理を備えたオンラインショッピングモール',
+    faq_tag:'FAQ', faq_title:'よくある質問',
+    faq_desc:'ご依頼前によく聞かれる質問をまとめました。',
+    faq1_q:'開発期間はどれくらいかかりますか？',
+    faq1_a:'システムの規模により異なりますが、シンプルな業務システムで2〜4週間、複雑な統合システムで1〜3ヶ月程度が目安です。ご相談時にヒアリングしたうえで、具体的なスケジュールをご提示します。',
+    faq2_q:'料金はどのくらいですか？',
+    faq2_a:'機能や規模によって大きく変わるため、まずは無料でご相談・お見積りを行っています。要件をヒアリングした上で、明確な金額をご提示しますので、まずはお気軽にご連絡ください。',
+    faq3_q:'堺市・大阪以外の地域でも対応可能ですか？',
+    faq3_a:'はい、可能です。オンラインでのヒアリング・打ち合わせに対応しており、全国どこからでもご依頼いただけます。',
+    faq4_q:'どのような業種・業務に対応していますか？',
+    faq4_a:'在庫管理、予約システム、チャット統合、請求書発行、勤怠管理など、業種を問わず「手作業が多くて困っている業務」全般に対応しています。実際の事例は上記をご覧ください。',
+    faq5_q:'システム導入後の保守・サポートはありますか？',
+    faq5_a:'はい、納品後の運用サポート・保守・追加機能の開発にも対応しています。長期的に安心してご利用いただけるよう、契約内容に応じてサポート体制をご用意します。',
+    faq6_q:'既存の業務フローやエクセル管理からの移行は可能ですか？',
+    faq6_a:'もちろん可能です。現在お使いのエクセルや既存システムの内容をヒアリングし、業務を止めずに移行できるよう設計いたします。',
+    faq7_q:'個人エンジニアに依頼するのは不安なのですが、大丈夫でしょうか？',
+    faq7_a:'企画・設計・開発・運用まで一人で担当しているため、伝達ミスや余分な調整コストが発生せず、スピーディーかつ柔軟に対応できる点が強みです。実際に10件以上のシステムを稼働させてきた実績がありますので、まずはお気軽にご相談ください。',
+    faq8_q:'相談する際、何を準備すればいいですか？',
+    faq8_a:'特別な準備は不要です。「今困っていること」「理想の状態」をざっくりお伝えいただくだけで構いません。詳細はヒアリングしながら一緒に整理していきます。',
     contact_tag:'Contact',
     contact_title:'<span>お気軽に</span>ご連絡ください',
     contact_desc:'お仕事のご相談や技術的なご質問など、どんなことでもお待ちしています。',
     contact_btn:'メールを送る',
+    contact_btn_line:'LINEで連絡する',
     t_auto:'自動化', t_settlement:'精算', t_admin:'管理画面',
     t_voice:'音声入力', t_ai_bot:'AIチャットボット', t_medical:'医療', t_auto_reply:'自動応対',
     t_realtime:'リアルタイム', t_report:'レポート', t_alert:'アラート',
@@ -698,7 +832,7 @@ const i18n = {
     footer:'© 2026 Kim Gutae',
   },
   ko: {
-    nav_about:'소개', nav_systems:'시스템', nav_websites:'웹사이트', nav_contact:'연락',
+    nav_about:'소개', nav_systems:'시스템', nav_websites:'웹사이트', nav_faq:'자주 묻는 질문', nav_contact:'연락',
     hero_badge:'오사카·사카이 웹엔지니어',
     hero_h1:'지금까지 만든 것들을<br><span>소개합니다</span>',
     hero_p:'오사카·사카이를 거점으로, 중소기업의 \'반복되는 수작업\'을 시스템으로 해결하고 있습니다.\n지금까지 실제 고객을 위해 설계하고 구축한 시스템들을 소개합니다.',
@@ -725,6 +859,7 @@ const i18n = {
     s8_title:'출퇴근 / 시프트 시스템', s8_desc:'직원 출퇴근 기록, 시프트 스케줄 배정, 초과근무 집계를 자동화한 시스템',
     s9_title:'청구서 자동화 시스템', s9_desc:'거래 데이터 기반 청구서 자동 생성, PDF 발행, 이메일 발송을 자동화한 시스템',
     s10_title:'재고 연동 해외 차량 판매 시스템', s10_desc:'타사로부터 재고 데이터를 받아 해외 시장에 차량을 판매하는 크로스보더 자동차 판매 플랫폼',
+    sys_more:'더보기', sys_less:'접기',
     stack_title:'기술 스택', stack_desc:'기획부터 완성·운영까지, 혼자서 모두 대응합니다.',
     stack_frontend:'프론트엔드', stack_backend:'백엔드', stack_db:'데이터베이스', stack_infra:'인프라', stack_api:'외부 API', stack_voice:'음성 · AI',
     web_tag:'Websites', web_title:'웹사이트', web_desc:'브랜딩부터 전환까지, 목적에 맞게 설계·개발한 웹서비스입니다.',
@@ -732,10 +867,29 @@ const i18n = {
     w2_title:'기프트권 매입 사이트', w2_desc:'사용자가 기프트권 정보를 입력하면 즉시 견적을 확인하고 매입 신청까지 완료할 수 있는 전환 중심 랜딩 페이지',
     w3_title:'인재 소개 사이트', w3_desc:'구직자와 기업 양쪽에 서비스 내용을 알기 쉽게 소개하는 심플한 인재 소개 사이트',
     w4_title:'쇼핑몰 사이트', w4_desc:'이커머스 플랫폼 카페24를 활용해 구축한, 상품 진열·장바구니·결제·주문 관리를 갖춘 온라인 쇼핑몰',
+    faq_tag:'FAQ', faq_title:'자주 묻는 질문',
+    faq_desc:'의뢰 전에 자주 받는 질문을 모았습니다.',
+    faq1_q:'개발 기간은 얼마나 걸리나요?',
+    faq1_a:'시스템 규모에 따라 다르지만, 간단한 업무 시스템은 2~4주, 복잡한 통합 시스템은 1~3개월 정도가 기준입니다. 상담 시 요구사항을 청취한 후 구체적인 일정을 안내드립니다.',
+    faq2_q:'비용은 어느 정도인가요?',
+    faq2_a:'기능과 규모에 따라 크게 달라지기 때문에, 먼저 무료 상담 및 견적을 진행하고 있습니다. 요구사항을 들은 후 명확한 금액을 안내드리니, 편하게 문의해주세요.',
+    faq3_q:'사카이시·오사카 외 지역도 가능한가요?',
+    faq3_a:'네, 가능합니다. 온라인 미팅·상담으로 진행하기 때문에 전국 어디서든 의뢰하실 수 있습니다.',
+    faq4_q:'어떤 업종·업무에 대응 가능한가요?',
+    faq4_a:'재고 관리, 예약 시스템, 채팅 통합, 청구서 발행, 근태 관리 등 업종과 관계없이 수작업이 많아 불편한 업무 전반에 대응합니다. 실제 구축 사례는 위에서 확인하실 수 있습니다.',
+    faq5_q:'시스템 도입 후 유지보수·지원이 있나요?',
+    faq5_a:'네, 납품 후 운영 지원·유지보수·추가 기능 개발까지 대응합니다. 장기적으로 안심하고 사용하실 수 있도록 계약 내용에 맞는 지원체계를 마련합니다.',
+    faq6_q:'기존 업무 방식(엑셀 등)에서의 이전도 가능한가요?',
+    faq6_a:'물론 가능합니다. 현재 사용 중인 엑셀이나 기존 시스템 내용을 청취한 후, 업무 중단 없이 이전할 수 있도록 설계합니다.',
+    faq7_q:'개인 엔지니어에게 맡기는 게 불안한데 괜찮을까요?',
+    faq7_a:'기획·설계·개발·운영까지 혼자 담당하기 때문에 전달 오류나 불필요한 조율 비용 없이 빠르고 유연하게 대응할 수 있다는 점이 강점입니다. 실제로 10건 이상의 시스템을 운영한 실적이 있으니 편하게 상담해주세요.',
+    faq8_q:'상담 시 무엇을 준비하면 될까요?',
+    faq8_a:'특별한 준비는 필요 없습니다. \'지금 곤란한 점\'과 \'원하는 모습\'을 간단히 알려주시면 됩니다. 자세한 내용은 상담하면서 함께 정리해 나가겠습니다.',
     contact_tag:'Contact',
     contact_title:'<span>편하게</span> 연락주세요',
     contact_desc:'업무 상담이나 기술적인 질문 등 어떤 내용이든 환영합니다.',
     contact_btn:'이메일 보내기',
+    contact_btn_line:'라인으로 연락하기',
     t_auto:'자동화', t_settlement:'정산', t_admin:'관리자',
     t_voice:'음성입력', t_ai_bot:'AI 챗봇', t_medical:'의료', t_auto_reply:'자동응대',
     t_realtime:'실시간', t_report:'리포트', t_alert:'알림',
@@ -761,7 +915,24 @@ function applyLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+  updateSysMoreLabel();
 }
+
+/* ── SYSTEMS SHOW MORE ── */
+function updateSysMoreLabel() {
+  const grid = document.getElementById('systemsGrid');
+  const label = document.getElementById('systemsMoreLabel');
+  if (!grid || !label) return;
+  const expanded = grid.classList.contains('expanded');
+  label.textContent = i18n[currentLang][expanded ? 'sys_less' : 'sys_more'];
+}
+document.getElementById('systemsMoreBtn').addEventListener('click', () => {
+  const grid = document.getElementById('systemsGrid');
+  const btn = document.getElementById('systemsMoreBtn');
+  grid.classList.toggle('expanded');
+  btn.classList.toggle('expanded');
+  updateSysMoreLabel();
+});
 
 function setLang(lang) {
   if (lang === currentLang) return;
@@ -801,6 +972,28 @@ document.querySelectorAll('.grid').forEach(grid => {
   });
 });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+/* ── FAQ ACCORDION ── */
+document.querySelectorAll('.faq-item').forEach(item => {
+  const btn = item.querySelector('.faq-q');
+  const wrap = item.querySelector('.faq-a-wrap');
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(other => {
+      if (other !== item) {
+        other.classList.remove('open');
+        other.querySelector('.faq-a-wrap').style.maxHeight = null;
+      }
+    });
+    if (isOpen) {
+      item.classList.remove('open');
+      wrap.style.maxHeight = null;
+    } else {
+      item.classList.add('open');
+      wrap.style.maxHeight = wrap.scrollHeight + 'px';
+    }
+  });
+});
 
 /* ── SCROLL PROGRESS BAR ── */
 const bar = document.getElementById('progress');
