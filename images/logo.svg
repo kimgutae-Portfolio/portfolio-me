@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="letter" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b82ff"/>
+      <stop offset="1" stop-color="#ff6584"/>
+    </linearGradient>
+    <radialGradient id="glowPurple" cx="0.18" cy="0.12" r="0.9">
+      <stop offset="0" stop-color="#6c63ff" stop-opacity="0.55"/>
+      <stop offset="0.55" stop-color="#6c63ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPink" cx="0.88" cy="0.9" r="0.85">
+      <stop offset="0" stop-color="#ff6584" stop-opacity="0.4"/>
+      <stop offset="0.55" stop-color="#ff6584" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="squircle">
+      <rect x="0" y="0" width="512" height="512" rx="115"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#squircle)">
+    <rect width="512" height="512" fill="#0c0c13"/>
+    <rect width="512" height="512" fill="url(#glowPurple)"/>
+    <rect width="512" height="512" fill="url(#glowPink)"/>
+  </g>
+  <path d="M107.890756302521 138.5V373.5H159.5644257703081V297.7997198879552L189.18627450980392 267.8487394957983L259.94957983193274 373.5H324.78851540616245L224.07422969187675 231.31512605042016L315.9019607843137 138.5H251.39215686274508L159.5644257703081 235.92296918767508V138.5ZM352.4355742296919 322.8137254901961V373.5H404.10924369747903V322.8137254901961Z" fill="url(#letter)"/>
+</svg>
