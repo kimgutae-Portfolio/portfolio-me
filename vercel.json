@@ -1,14 +1,10 @@
 {
   "trailingSlash": false,
-  "headers": [
+  "redirects": [
     {
       "source": "/ko",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, follow" }
-      ]
+      "destination": "/",
+      "permanent": true
     }
-  ],
-  "rewrites": [
-    { "source": "/ko", "destination": "/index.html" }
   ]
 }

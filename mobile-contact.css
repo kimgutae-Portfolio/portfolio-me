@@ -1,0 +1,60 @@
+/* A persistent contact action for narrow screens. */
+.mobile-line-cta {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --mobile-contact-space: calc(74px + env(safe-area-inset-bottom, 0px));
+  }
+
+  html {
+    scroll-padding-bottom: var(--mobile-contact-space);
+  }
+
+  body {
+    padding-bottom: var(--mobile-contact-space);
+  }
+
+  .mobile-line-cta {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 60;
+    display: block;
+    padding: 10px max(18px, env(safe-area-inset-right, 0px))
+      calc(10px + env(safe-area-inset-bottom, 0px))
+      max(18px, env(safe-area-inset-left, 0px));
+    background: rgba(247, 248, 242, .96);
+    border-top: 1px solid #dce4d8;
+    box-shadow: 0 -5px 20px #183b2b08;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  .mobile-line-cta a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 12px 20px;
+    border-radius: 7px;
+    background: #06c755;
+    color: #063b1d;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 750;
+    line-height: 1.5;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-line-cta a:hover,
+  .mobile-line-cta a:active {
+    background: #05b24c;
+  }
+
+  .mobile-line-cta a:focus-visible {
+    outline: 3px solid #183b2b;
+    outline-offset: 3px;
+  }
+}

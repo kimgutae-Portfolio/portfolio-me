@@ -1,0 +1,132 @@
+/* One product screen, with quiet depth and a clear place in the hero. */
+.hero-scene-wrap { width: 100%; margin: 0; }
+.spatial-scene {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.42;
+  perspective: 1500px;
+  perspective-origin: 50% 42%;
+  touch-action: pan-y pinch-zoom;
+}
+.spatial-scene::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  left: 8%;
+  bottom: 1%;
+  width: 84%;
+  height: 11%;
+  background: radial-gradient(ellipse, #24352c26 0%, #24352c0a 42%, transparent 72%);
+  pointer-events: none;
+}
+.spatial-world {
+  position: absolute;
+  z-index: 1;
+  left: 4%;
+  right: 6%;
+  top: 46%;
+  aspect-ratio: 1.5;
+  transform-style: preserve-3d;
+  transform: translateY(-50%) rotateX(calc(7deg + var(--scene-tilt-x, 0deg))) rotateY(calc(-9deg + var(--scene-tilt-y, 0deg)));
+  transform-origin: center;
+  transition: transform .8s cubic-bezier(.2, .8, .25, 1);
+}
+.spatial-backplate {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #bec6b780;
+  border-radius: 10px;
+  background: #e5e9df;
+  pointer-events: none;
+}
+.backplate-far { transform: translate3d(20px, 15px, -48px); background: #edf0e8; }
+.backplate-near { transform: translate3d(10px, 8px, -22px); }
+.spatial-panel {
+  position: absolute;
+  inset: 0;
+  padding: 4px;
+  border: 1px solid #cdd2c8;
+  border-radius: 10px;
+  background: #fafbf7;
+  box-shadow: 0 1px 1px #1d2f2012;
+  backface-visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate3d(12px, 5px, -24px) scale(.985);
+  transition: opacity .35s ease, transform .65s cubic-bezier(.2, .8, .25, 1), visibility 0s .35s;
+}
+.spatial-panel.is-selected {
+  opacity: 1;
+  visibility: visible;
+  transform: translateZ(12px);
+  transition-delay: 0s;
+}
+.plane-screen { width: 100%; height: 100%; overflow: hidden; border-radius: 6px; background: #fff; }
+.plane-screen img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.hero-scene-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 4% 0;
+  color: #73796d;
+  font-size: 10px;
+  line-height: 1.6;
+}
+.hero-scene-meta strong { color: #334633; font-size: 12px; font-weight: 550; }
+.hero-scene-meta span { text-align: right; }
+.hero-spatial .workflow-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 92%;
+  margin: 21px auto 0;
+  border-bottom: 1px solid #c9d0c1;
+}
+.hero-spatial .workflow-button {
+  position: relative;
+  min-height: 48px;
+  padding: 12px 6px;
+  border: 0;
+  background: transparent;
+  color: #7b8274;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+.hero-spatial .workflow-button::after {
+  content: '';
+  position: absolute;
+  inset: auto 13px -1px;
+  height: 2px;
+  background: #345c36;
+  transform: scaleX(0);
+  transition: transform .3s ease;
+}
+.hero-spatial .workflow-button:hover { color: #345c36; }
+.hero-spatial .workflow-button.is-selected { color: #27462c; font-weight: 600; }
+.hero-spatial .workflow-button.is-selected::after { transform: scaleX(1); }
+.hero-spatial .workflow-button:focus-visible { outline: 2px solid #487c43; outline-offset: 4px; border-radius: 2px; }
+@media (max-width: 600px) {
+  .spatial-scene { aspect-ratio: 1.4; perspective: 1100px; }
+  .spatial-world { left: 3%; right: 4%; top: 45%; }
+  .backplate-far { display: none; }
+  .backplate-near { transform: translate3d(7px, 6px, -18px); }
+  .spatial-panel { padding: 2px; border-radius: 7px; }
+  .plane-screen { border-radius: 4px; }
+  .hero-scene-meta { padding-top: 4px; font-size: 9px; }
+  .hero-scene-meta strong { font-size: 11px; }
+  .hero-spatial .workflow-controls { margin-top: 15px; width: 94%; }
+  .hero-spatial .workflow-button { padding-inline: 3px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spatial-world { transform: translateY(-50%) rotateX(7deg) rotateY(-9deg); transition: none; }
+  .spatial-panel, .hero-spatial .workflow-button, .hero-spatial .workflow-button::after { transition: none; }
+}
+@supports not (transform-style: preserve-3d) {
+  .spatial-world { transform: translateY(-50%); }
+  .spatial-backplate { display: none; }
+  .spatial-panel.is-selected { transform: none; }
+}
