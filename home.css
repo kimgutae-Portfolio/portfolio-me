@@ -47,6 +47,19 @@
 .contact-title { font-size: clamp(30px, 3.2vw, 43px); line-height: 1.6; }
 footer { display: flex; justify-content: center; gap: 26px; align-items: center; }
 footer a { text-decoration: none; font-size: 10px; }
+.home-columns { max-width: none; padding: 74px 0 80px; background: #fff; }
+.home-columns-inner { max-width: 1240px; padding-inline: 44px; margin-inline: auto; }
+.home-columns-heading { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 30px; }
+.home-columns-heading h2 { font-size: clamp(25px, 2.8vw, 35px); font-weight: 600; letter-spacing: -.04em; line-height: 1.7; }
+.home-columns-heading .text-link { flex-shrink: 0; margin-bottom: 9px; }
+.home-columns-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.home-column { border-top: 1px solid #d5dfce; padding-top: 21px; }
+.home-column-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 9px; color: #819079; margin-bottom: 15px; }
+.home-column-meta span { color: #52794e; font-weight: 600; }
+.home-column h3 { font-size: 17px; font-weight: 600; letter-spacing: -.02em; line-height: 1.85; }
+.home-column h3 a { text-decoration: none; }
+.home-column h3 a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.home-column-desc { margin-top: 15px; font-size: 11px; line-height: 2; color: #71806e; }
 @media (max-width: 1100px) {
   .hero-inner { gap: 35px; padding: 57px 4.5% 65px; grid-template-columns: .9fr 1.15fr; }
   .hero h1 { font-size: 45px; }
@@ -109,6 +122,17 @@ footer a { text-decoration: none; font-size: 10px; }
   #faq { padding: 55px 24px; gap: 23px; }
   #contact { padding: 55px 24px 61px; }
   .contact-title { font-size: 29px; }
+  .home-columns { padding: 52px 0 55px; }
+  .home-columns-inner { padding-inline: 24px; }
+  .home-columns-heading { display: block; margin-bottom: 25px; }
+  .home-columns-heading h2 { font-size: 25px; }
+  .home-columns-heading .text-link { display: inline-flex; min-height: 44px; align-items: center; margin: 10px 0 0; font-size: 11px; }
+  .home-columns-grid { grid-template-columns: 1fr; gap: 27px; }
+  .home-column { padding-top: 18px; }
+  .home-column-meta { margin-bottom: 12px; }
+  .home-column h3 { font-size: 17px; }
+  .home-column-desc { margin-top: 11px; }
+  footer { flex-wrap: wrap; gap: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .system-overview img { transition: none; }

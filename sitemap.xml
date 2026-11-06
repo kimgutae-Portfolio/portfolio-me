@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.gutae.dev/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-11-06</lastmod>
   </url>
   <url>
     <loc>https://www.gutae.dev/systems.html</loc>
@@ -19,5 +19,21 @@
   <url>
     <loc>https://www.gutae.dev/cases/cross-border-ecommerce.html</loc>
     <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.gutae.dev/column.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://www.gutae.dev/column/excel-to-system.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://www.gutae.dev/column/system-development-cost.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://www.gutae.dev/column/inventory-system-requirements.html</loc>
+    <lastmod>2026-11-06</lastmod>
   </url>
 </urlset>

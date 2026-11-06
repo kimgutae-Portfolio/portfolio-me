@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Excel管理から業務システムへ移行する判断基準と手順｜KGT</title>
+  <meta name="description" content="Excel管理を続けるか、業務システムへ移行するか。二重入力、承認、権限、在庫の照合などの判断基準と、小さく移行する手順を整理します。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.gutae.dev/column/excel-to-system.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://www.gutae.dev/column/excel-to-system.html">
+  <meta property="og:title" content="Excel管理から業務システムへ移行する判断基準と手順｜KGT">
+  <meta property="og:description" content="Excel管理を続けるか、業務システムへ移行するか。二重入力、承認、権限、在庫の照合などの判断基準と、小さく移行する手順を整理します。">
+  <meta property="og:image" content="https://www.gutae.dev/images/services/overview-v2.png">
+  <meta property="og:image:width" content="1536">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="KGTの業務システム開発の画面イメージ">
+  <meta property="article:published_time" content="2026-11-06">
+  <meta property="article:modified_time" content="2026-11-06">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Excel管理から業務システムへ移行する判断基準と手順｜KGT">
+  <meta name="twitter:description" content="Excel管理を続けるか、業務システムへ移行するか。二重入力、承認、権限、在庫の照合などの判断基準と、小さく移行する手順を整理します。">
+  <meta name="twitter:image" content="https://www.gutae.dev/images/services/overview-v2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.gutae.dev/column/excel-to-system.html#article",
+      "headline": "Excel管理から業務システムへ移行する判断基準と進め方",
+      "description": "Excel管理を続けるか、業務システムへ移行するか。二重入力、承認、権限、在庫の照合などの判断基準と、小さく移行する手順を整理します。",
+      "inLanguage": "ja",
+      "articleSection": "業務改善",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "author": {
+        "@type": "Organization",
+        "name": "KGT",
+        "url": "https://www.gutae.dev/#about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "KGT",
+        "url": "https://www.gutae.dev/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.gutae.dev/images/logo-512.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.gutae.dev/column/excel-to-system.html"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://www.gutae.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "コラム",
+          "item": "https://www.gutae.dev/column.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Excel管理から業務システムへ移行する判断基準と進め方",
+          "item": "https://www.gutae.dev/column/excel-to-system.html"
+        }
+      ]
+    }
+  ]
+}</script>
+  <link rel="stylesheet" href="/service.css">
+  <link rel="stylesheet" href="/mobile-contact.css">
+  <link rel="stylesheet" href="/column/column.css">
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body class="column-page">
+<a class="column-skip" href="#mainContent">本文へ移動</a>
+<nav class="site-nav" aria-label="メインナビゲーション">
+  <a class="logo" href="/" aria-label="KGT ホーム">KGT<span> BUSINESS SYSTEMS</span></a>
+  <div class="nav-right"><ul>
+    <li><a href="/#about">大切にしていること</a></li>
+    <li><a href="/systems.html">システム一覧</a></li>
+    <li><a href="/#faq">よくある質問</a></li>
+    <li><a href="/column.html">コラム</a></li>
+    <li><a href="#columnContact">お問い合わせ</a></li>
+  </ul></div>
+</nav>
+<main id="mainContent">
+  <nav class="column-breadcrumb column-shell" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li><a href="/column.html">コラム</a></li><li><span aria-current="page">Excel管理から業務システムへ移行する判断基準と進め方</span></li></ol></nav>
+  <article>
+    <header class="article-header">
+      <div class="article-meta"><span class="column-category">業務改善</span><time datetime="2026-11-06">2026年11月6日</time><span>執筆：<a href="/#about" rel="author">KGT</a></span></div>
+      <h1>Excel管理から業務システムへ移行する判断基準と進め方</h1>
+      <p class="article-intro">「在庫表を更新したのに、別の担当者には古い数字が伝わっていた」「受注表の内容を、納品書と請求書へ何度も入力している」。こうした困りごとが増えたとき、最初に考えたいのは、どの作業を一つにつなぐかです。Excel管理を続けられるケースと、業務システムへの移行を検討したいケースを分けて整理します。</p>
+      <div class="article-summary"><strong>この記事のポイント</strong><p>移行を考える軸は、Excelの行数よりも転記・照合・権限管理の負担です。運用の整理や既存サービスも比較し、一つの業務から切り替えます。</p></div>
+    </header>
+    <div class="column-shell article-layout">
+      <nav class="article-toc" aria-labelledby="tocTitle"><h2 id="tocTitle">この記事の目次</h2><ol><li><a href="#keep-excel">Excel管理を続けてよいケースもある</a></li>
+<li><a href="#signals">移行を検討したいのは、表より業務のつながりが複雑になったとき</a></li>
+<li><a href="#choose-method">整理・既存サービス・個別開発から方法を選ぶ</a></li>
+<li><a href="#migration-steps">移行は一つの業務から、順序を決めて進める</a></li>
+<li><a href="#prepare-consultation">相談前にそろえると、話が具体的になるもの</a></li></ol></nav>
+      <div class="article-body">
+<section class="article-section" id="keep-excel"><h2>Excel管理を続けてよいケースもある</h2>
+<p>担当者が限られ、入力項目が少なく、集計や確認を無理なく回せているなら、Excelは引き続き有力な選択肢です。更新する人とタイミングを決める、入力欄を統一する、商品コードをそろえるといった整理だけで改善することもあります。</p><p>また、Excelには対応する環境での共同編集機能があり、Microsoft 365のバージョン履歴はOneDriveやSharePointに保存されたファイルで利用できます。「共有できないから」という理由だけで、開発を決める必要はありません。現在の契約、保存先、利用するアプリが機能の条件に合うかを先に確認しましょう。</p>
+</section>
+<section class="article-section" id="signals"><h2>移行を検討したいのは、表より業務のつながりが複雑になったとき</h2>
+<p>判断の軸はファイルの行数や利用人数だけではありません。次のような状態が、日々の確認や転記を増やしていないかを見ます。</p><ul><li><strong>同じ情報を何度も入力する。</strong>受注、出荷、請求で品番・数量・取引先を転記し、修正のたびに複数の表を直している。</li><li><strong>担当者ごとに見せる情報を分けたい。</strong>倉庫には数量、営業には取引先、管理者には原価を見せるなど、仕事に応じた閲覧・編集範囲が必要になっている。</li><li><strong>変更の理由や承認状況を追いたい。</strong>値の修正だけでなく、誰が何を申請し、誰が承認したかを一件単位で確認する必要がある。</li><li><strong>毎日の照合作業が増えている。</strong>実在庫、受注残、出荷予定が別々にあり、数字のずれを担当者が調べ続けている。</li><li><strong>一人の操作に依存している。</strong>複雑なマクロや手順を特定の人だけが把握し、休暇や引き継ぎの際に業務が止まりやすい。</li></ul><p>これらがあっても、すべてを開発するとは限りません。まず一週間の作業を記録し、頻度、所要時間、誤りが起きたときの影響を並べると、優先順位が見えてきます。</p>
+</section>
+<section class="article-section" id="choose-method"><h2>整理・既存サービス・個別開発から方法を選ぶ</h2>
+<div class="article-table-wrap" tabindex="0" role="region" aria-label="困りごとに合わせた改善方法の例（横にスクロールできます）"><table><caption>困りごとに合わせた改善方法の例</caption><thead><tr><th scope="col">今の状態</th><th scope="col">先に検討する方法</th></tr></thead><tbody><tr><th scope="row">表記ゆれや更新ルールが主な問題</th><td>Excelの項目、保存先、運用ルールを整理する</td></tr><tr><th scope="row">標準的な予約・勤怠・販売管理が中心</th><td>既存サービスの機能と、自社の業務条件を照らし合わせる</td></tr><tr><th scope="row">独自の承認、帳票、既存システムとの接続が必要</th><td>個別開発や、既存サービスに補助機能を加える方法を比較する</td></tr></tbody></table></div><p>比較するときは、導入費だけでなく、毎月の利用料、運用を担う人、データの取り出し方まで確認します。現在のExcelを集計や分析に残し、入力と履歴の管理だけをシステムへ移す構成も考えられます。</p>
+</section>
+<section class="article-section" id="migration-steps"><h2>移行は一つの業務から、順序を決めて進める</h2>
+<ol><li><strong>最初に扱う範囲を決める。</strong>たとえば「入出庫の記録と現在庫の確認」までとし、仕入れ、請求、会計との連携は次の段階に分けます。</li><li><strong>データの意味をそろえる。</strong>商品名だけで判断せず、商品コード、単位、取引先コード、日付、空欄の意味を確認します。重複や表記ゆれは移行前に整理します。</li><li><strong>日常と例外の両方で試す。</strong>通常の出荷に加え、返品、取消、数量訂正、過去日付の入力など、現場で起きる操作を確認します。</li><li><strong>短い試行期間で結果を照合する。</strong>選んだ商品や担当者で試し、旧表と新しい画面の件数・数量・金額が合うかを確認します。二重入力を続ける期間と、照合する担当者を先に決めます。</li><li><strong>切り替えと戻し方を決める。</strong>いつから新しい仕組みを正とするか、旧表をいつ読み取り専用にするか、問題時に誰が判断するかを共有します。移行前の原本も保存しておきます。</li></ol><p>データを移すだけでは運用は変わりません。「誰が、いつ、どの画面へ入力するか」を短い手順書にし、担当者が自分の仕事で使えることまで確認してから範囲を広げます。</p>
+</section>
+<section class="article-section" id="prepare-consultation"><h2>相談前にそろえると、話が具体的になるもの</h2>
+<p>現在の表の項目名、作業の流れ、利用する担当者、繰り返している転記や確認を整理すると、必要な機能を絞りやすくなります。最初の相談では、個人情報や取引先の実データを除いたサンプルで十分です。</p><p>大切なのは「Excelをなくすこと」より、更新漏れや照合の負担が起きる場所を減らすことです。まずは一つの業務を選び、Excelの整理で足りるか、既存サービスが合うか、個別の仕組みが必要かを比較しましょう。</p>
+</section>
+        <section class="article-section" id="references"><h2>参考資料</h2><ul class="article-source-list"><li><a href="https://support.microsoft.com/ja-jp/excel/get-started/collaborate-on-excel-workbooks-at-the-same-time-with-co-authoring">Microsoft サポート：Excel ブックを共同編集する</a><small>共同編集の利用条件を確認する資料です。</small></li><li><a href="https://support.microsoft.com/ja-jp/office/collab-files/view-previous-versions-of-office-files">Microsoft サポート：Office ファイルの以前のバージョンを表示する</a><small>Microsoft 365のバージョン履歴と保存先の条件を確認する資料です。</small></li></ul></section>
+        <aside class="article-author" aria-labelledby="authorTitle"><h2 id="authorTitle">この記事を書いた人：KGT</h2><p>大阪府堺市を拠点に、業務システム開発・業務自動化を行っています。在庫・予約・請求・外部サービス連携など、現在の業務に合う仕組みを設計・開発します。<a href="/#about">設計の考え方と開発の流れを見る</a></p></aside>
+        <section class="article-related" aria-labelledby="relatedTitle"><h2 id="relatedTitle">関連するサービス・コラム</h2><ul><li><a href="/systems.html#inventory">在庫一覧・入出庫管理の機能を見る</a></li><li><a href="/systems.html#invoice">請求書の自動化の機能を見る</a></li><li><a href="/column/system-development-cost.html">業務システム開発の費用を決める要素と、見積もりの確認ポイント</a></li><li><a href="/column/inventory-system-requirements.html">在庫管理システムの導入前に決める5つのこと</a></li></ul><a class="article-back" href="/column.html">コラム一覧へ戻る</a></section>
+      </div>
+    </div>
+  </article>
+  <section class="column-consult" id="columnContact" aria-labelledby="columnContactTitle"><div class="column-shell column-consult-inner">
+  <div><h2 id="columnContactTitle">業務の整理から、ご相談ください。</h2><p>大阪・堺市を拠点に、オンラインで全国のご相談に対応しています。<br>今の作業と、変えたいことからお聞かせください。ご相談・お見積りは無料です。</p></div>
+  <div><div class="contact-actions"><a class="button button-email" href="mailto:info@gutae.dev?subject=%E3%82%B3%E3%83%A9%E3%83%A0%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87%EF%BC%9AExcel%E7%AE%A1%E7%90%86%E3%81%8B%E3%82%89%E6%A5%AD%E5%8B%99%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E7%A7%BB%E8%A1%8C%E3%81%99%E3%82%8B%E5%88%A4%E6%96%AD%E5%9F%BA%E6%BA%96%E3%81%A8%E9%80%B2%E3%82%81%E6%96%B9">メールで無料相談</a><a class="button button-line" href="https://lin.ee/QPi1J5m" target="_blank" rel="noopener">LINEで相談</a></div><a class="column-email" href="mailto:info@gutae.dev?subject=%E3%82%B3%E3%83%A9%E3%83%A0%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87%EF%BC%9AExcel%E7%AE%A1%E7%90%86%E3%81%8B%E3%82%89%E6%A5%AD%E5%8B%99%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E7%A7%BB%E8%A1%8C%E3%81%99%E3%82%8B%E5%88%A4%E6%96%AD%E5%9F%BA%E6%BA%96%E3%81%A8%E9%80%B2%E3%82%81%E6%96%B9">info@gutae.dev</a></div>
+</div></section>
+</main>
+<footer class="column-footer"><a href="/">KGT ホーム</a><a href="/systems.html">システム一覧</a><a href="/column.html">コラム一覧</a><p>© 2026 KGT · 大阪府堺市</p></footer>
+<aside class="mobile-contact-cta" aria-label="お問い合わせ"><a class="mobile-contact-email" href="mailto:info@gutae.dev?subject=%E3%82%B3%E3%83%A9%E3%83%A0%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87%EF%BC%9AExcel%E7%AE%A1%E7%90%86%E3%81%8B%E3%82%89%E6%A5%AD%E5%8B%99%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E7%A7%BB%E8%A1%8C%E3%81%99%E3%82%8B%E5%88%A4%E6%96%AD%E5%9F%BA%E6%BA%96%E3%81%A8%E9%80%B2%E3%82%81%E6%96%B9">メールで相談</a><a class="mobile-contact-line" href="https://lin.ee/QPi1J5m" target="_blank" rel="noopener">LINEで相談</a></aside>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>在庫管理システムの導入前に決める5つのこと｜KGT</title>
+  <meta name="description" content="在庫管理システムを導入する前に、管理する商品・入出庫の記録・在庫数の定義・担当者の権限・移行方法を整理。業務に合う機能を決めるための確認ポイントを紹介します。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.gutae.dev/column/inventory-system-requirements.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://www.gutae.dev/column/inventory-system-requirements.html">
+  <meta property="og:title" content="在庫管理システムの導入前に決める5つのこと｜KGT">
+  <meta property="og:description" content="在庫管理システムを導入する前に、管理する商品・入出庫の記録・在庫数の定義・担当者の権限・移行方法を整理。業務に合う機能を決めるための確認ポイントを紹介します。">
+  <meta property="og:image" content="https://www.gutae.dev/images/services/overview-v2.png">
+  <meta property="og:image:width" content="1536">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="KGTの業務システム開発の画面イメージ">
+  <meta property="article:published_time" content="2026-11-06">
+  <meta property="article:modified_time" content="2026-11-06">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="在庫管理システムの導入前に決める5つのこと｜KGT">
+  <meta name="twitter:description" content="在庫管理システムを導入する前に、管理する商品・入出庫の記録・在庫数の定義・担当者の権限・移行方法を整理。業務に合う機能を決めるための確認ポイントを紹介します。">
+  <meta name="twitter:image" content="https://www.gutae.dev/images/services/overview-v2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.gutae.dev/column/inventory-system-requirements.html#article",
+      "headline": "在庫管理システムの導入前に決める5つのこと",
+      "description": "在庫管理システムを導入する前に、管理する商品・入出庫の記録・在庫数の定義・担当者の権限・移行方法を整理。業務に合う機能を決めるための確認ポイントを紹介します。",
+      "inLanguage": "ja",
+      "articleSection": "在庫管理",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "author": {
+        "@type": "Organization",
+        "name": "KGT",
+        "url": "https://www.gutae.dev/#about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "KGT",
+        "url": "https://www.gutae.dev/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.gutae.dev/images/logo-512.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.gutae.dev/column/inventory-system-requirements.html"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://www.gutae.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "コラム",
+          "item": "https://www.gutae.dev/column.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "在庫管理システムの導入前に決める5つのこと",
+          "item": "https://www.gutae.dev/column/inventory-system-requirements.html"
+        }
+      ]
+    }
+  ]
+}</script>
+  <link rel="stylesheet" href="/service.css">
+  <link rel="stylesheet" href="/mobile-contact.css">
+  <link rel="stylesheet" href="/column/column.css">
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body class="column-page">
+<a class="column-skip" href="#mainContent">本文へ移動</a>
+<nav class="site-nav" aria-label="メインナビゲーション">
+  <a class="logo" href="/" aria-label="KGT ホーム">KGT<span> BUSINESS SYSTEMS</span></a>
+  <div class="nav-right"><ul>
+    <li><a href="/#about">大切にしていること</a></li>
+    <li><a href="/systems.html">システム一覧</a></li>
+    <li><a href="/#faq">よくある質問</a></li>
+    <li><a href="/column.html">コラム</a></li>
+    <li><a href="#columnContact">お問い合わせ</a></li>
+  </ul></div>
+</nav>
+<main id="mainContent">
+  <nav class="column-breadcrumb column-shell" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li><a href="/column.html">コラム</a></li><li><span aria-current="page">在庫管理システムの導入前に決める5つのこと</span></li></ol></nav>
+  <article>
+    <header class="article-header">
+      <div class="article-meta"><span class="column-category">在庫管理</span><time datetime="2026-11-06">2026年11月6日</time><span>執筆：<a href="/#about" rel="author">KGT</a></span></div>
+      <h1>在庫管理システムの導入前に決める5つのこと</h1>
+      <p class="article-intro">「在庫表と現物の数が合わない」「担当者に聞かないと出荷できる数が分からない」。こうした課題を整理するには、画面の機能を比べる前に、社内で在庫をどう扱っているかを確認することが大切です。同じ在庫管理でも、材料を製造に使う会社と、仕入れた商品を販売する会社では必要な記録が異なります。開発や導入の相談前に決めておきたい5つの項目を紹介します。</p>
+      <div class="article-summary"><strong>この記事のポイント</strong><p>機能を選ぶ前に、対象・記録する時点・在庫数の意味・担当者・移行方法を決めます。現場の運用と数字の定義をそろえることから始めます。</p></div>
+    </header>
+    <div class="column-shell article-layout">
+      <nav class="article-toc" aria-labelledby="tocTitle"><h2 id="tocTitle">この記事の目次</h2><ol><li><a href="#scope">1. 何を、どこまで管理するか</a></li>
+<li><a href="#record-timing">2. 入出庫を記録するタイミングをそろえる</a></li>
+<li><a href="#available-stock">3. 「現在庫」と「出荷できる数」を区別する</a></li>
+<li><a href="#roles">4. 誰が入力・修正・確認するか</a></li>
+<li><a href="#migration">5. 移行日と、使い始めるための確認項目を決める</a></li>
+<li><a href="#prepare">最初の相談に用意しておきたいもの</a></li></ol></nav>
+      <div class="article-body">
+<section class="article-section" id="scope"><h2>1. 何を、どこまで管理するか</h2>
+<p>まず、対象を材料・仕掛品・完成品・備品などに分けます。最初から全てを扱う必要はありません。「第1倉庫の完成品だけ」など、困っている範囲を具体的に決めると、必要な画面や入力項目を整理できます。</p><p>商品を識別する品番、保管場所、数量の単位もそろえます。同じ材料が「1箱」と「10個」で登録される場合は、単位の換算ルールが必要です。ロットや使用期限を追う必要がある商品は、どの場面でその情報を入力・確認するかまで決めておきます。</p>
+</section>
+<section class="article-section" id="record-timing"><h2>2. 入出庫を記録するタイミングをそろえる</h2>
+<p>在庫数を更新する基準が人によって違うと、システムを導入しても差異の原因が残ります。「発注した時」なのか「現物を受け入れた時」なのかを、作業ごとに合わせます。</p><div class="article-table-wrap" tabindex="0" role="region" aria-label="入出庫の運用を整理する確認表（横にスクロールできます）"><table><caption>入出庫の運用を整理する確認表</caption><thead><tr><th scope="col">作業</th><th scope="col">決めておくこと</th></tr></thead><tbody><tr><th scope="row">入庫</th><td>検品前後のどちらで登録するか、不足・不良品をどう扱うか</td></tr><tr><th scope="row">出庫</th><td>出荷・製造使用・貸出などの理由と、記録する担当者</td></tr><tr><th scope="row">返品・移動</th><td>戻り先の場所、再利用できる状態か、移動中の扱い</td></tr><tr><th scope="row">棚卸調整</th><td>差異を確認する人、調整理由と承認の要否</td></tr></tbody></table></div><p>作業日時と登録日時を分けて残すかも確認します。後から入力した記録を調べる際に、実際の作業と入力の順序を把握しやすくなります。</p>
+</section>
+<section class="article-section" id="available-stock"><h2>3. 「現在庫」と「出荷できる数」を区別する</h2>
+<p>倉庫にある数が、そのまま新しい注文に使える数とは限りません。受注済みの商品、不良品、検査待ちなどを含めるかで、表示すべき数字が変わります。</p><div class="article-example"><strong>在庫の表示を分ける例</strong><p>現物100個のうち20個を既存の注文に確保している場合、「現在庫100個」「引当済み20個」「利用可能80個」と分ける方法があります。</p><p>これは一つの例です。検査待ち・不良品などの扱いも含め、会社ごとの出荷の流れに合わせて定義します。</p></div><p>「最低在庫を下回ったら通知したい」という場合も、判定に現在庫と利用可能数のどちらを使うか、誰に通知するか、確認後にどう発注するかまで整理すると運用につながります。</p>
+</section>
+<section class="article-section" id="roles"><h2>4. 誰が入力・修正・確認するか</h2>
+<p>入力する人、在庫を見る人、品番を追加する人、棚卸差異を承認する人を分けて考えます。協力会社にも見せる場合は、対象の商品や拠点をどこまで共有するかを決めます。</p><p>誤入力に備え、訂正前後の内容・日時・担当者・理由を確認できる仕組みも検討します。バックアップの取得だけでなく、復元を依頼する窓口や、どの時点まで戻せるかも運用開始前に確認しましょう。</p>
+</section>
+<section class="article-section" id="migration"><h2>5. 移行日と、使い始めるための確認項目を決める</h2>
+<p>Excelや既存システムから移す際は、重複した品番、使っていない商品、単位や保管場所の表記ゆれを先に整理します。過去の記録を全件移すか、現在庫と必要な期間の履歴だけにするかでも作業量が変わります。</p><p>切り替え時には基準日時を決め、現物と移行後の数を照合します。日常業務に沿った確認表を用意しておくと、現場と開発担当者の判断がそろいます。</p><ul><li>入庫した数量が、正しい商品・保管場所に反映される。</li><li>出庫後の残数と、利用可能な数量が想定どおりになる。</li><li>返品・移動・棚卸差異を、理由と担当者を含めて記録できる。</li><li>権限のない担当者は変更できず、許可された範囲を確認できる。</li></ul><p>現場で端末を使う場合は、画面の見やすさ、通信環境、手袋での操作、バーコードの読み取り方法も実物で確かめます。少数の商品や一つの拠点で試し、運用上の問題を確認してから対象を広げる進め方もあります。</p>
+</section>
+<section class="article-section" id="prepare"><h2>最初の相談に用意しておきたいもの</h2>
+<p>現在の在庫表、代表的な入出庫の記録、困っている作業の例があると、必要な機能を整理しやすくなります。実データをそのまま渡す必要はなく、取引先名や金額などを置き換えたサンプルでも相談できます。</p><p>KGTでは、入出庫・在庫確認・アラート・レポートなど、業務に必要な範囲を一緒に整理します。既存の表計算や販売管理との関係も確認しながら、使い始める範囲を考えます。</p>
+</section>
+        <section class="article-section" id="references"><h2>参考資料</h2><ul class="article-source-list"><li><a href="https://www.ipa.go.jp/security/guide/sme/about.html">IPA：中小企業の情報セキュリティ対策ガイドライン</a><small>権限・バックアップなどの運用設計を考えるための参考資料です。</small></li></ul></section>
+        <aside class="article-author" aria-labelledby="authorTitle"><h2 id="authorTitle">この記事を書いた人：KGT</h2><p>大阪府堺市を拠点に、業務システム開発・業務自動化を行っています。在庫・予約・請求・外部サービス連携など、現在の業務に合う仕組みを設計・開発します。<a href="/#about">設計の考え方と開発の流れを見る</a></p></aside>
+        <section class="article-related" aria-labelledby="relatedTitle"><h2 id="relatedTitle">関連するサービス・コラム</h2><ul><li><a href="/cases/inventory-management.html">在庫管理システムの機能例を見る</a></li><li><a href="/systems.html#inventory">システム一覧で在庫管理を見る</a></li><li><a href="/column/excel-to-system.html">Excel管理から業務システムへ移行する判断基準と進め方</a></li><li><a href="/column/system-development-cost.html">業務システム開発の費用を決める要素と、見積もりの確認ポイント</a></li></ul><a class="article-back" href="/column.html">コラム一覧へ戻る</a></section>
+      </div>
+    </div>
+  </article>
+  <section class="column-consult" id="columnContact" aria-labelledby="columnContactTitle"><div class="column-shell column-consult-inner">
+  <div><h2 id="columnContactTitle">業務の整理から、ご相談ください。</h2><p>大阪・堺市を拠点に、オンラインで全国のご相談に対応しています。<br>今の作業と、変えたいことからお聞かせください。ご相談・お見積りは無料です。</p></div>
+  <div><div class="contact-actions"><a class="button button-email" href="mailto:info@gutae.dev?subject=%E3%82%B3%E3%83%A9%E3%83%A0%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87%EF%BC%9A%E5%9C%A8%E5%BA%AB%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E5%B0%8E%E5%85%A5%E5%89%8D%E3%81%AB%E6%B1%BA%E3%82%81%E3%82%8B5%E3%81%A4%E3%81%AE%E3%81%93%E3%81%A8">メールで無料相談</a><a class="button button-line" href="https://lin.ee/QPi1J5m" target="_blank" rel="noopener">LINEで相談</a></div><a class="column-email" href="mailto:info@gutae.dev?subject=%E3%82%B3%E3%83%A9%E3%83%A0%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87%EF%BC%9A%E5%9C%A8%E5%BA%AB%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E5%B0%8E%E5%85%A5%E5%89%8D%E3%81%AB%E6%B1%BA%E3%82%81%E3%82%8B5%E3%81%A4%E3%81%AE%E3%81%93%E3%81%A8">info@gutae.dev</a></div>
+</div></section>
+</main>
+<footer class="column-footer"><a href="/">KGT ホーム</a><a href="/systems.html">システム一覧</a><a href="/column.html">コラム一覧</a><p>© 2026 KGT · 大阪府堺市</p></footer>
+<aside class="mobile-contact-cta" aria-label="お問い合わせ"><a class="mobile-contact-email" href="mailto:info@gutae.dev?subject=%E3%82%B3%E3%83%A9%E3%83%A0%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87%EF%BC%9A%E5%9C%A8%E5%BA%AB%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E5%B0%8E%E5%85%A5%E5%89%8D%E3%81%AB%E6%B1%BA%E3%82%81%E3%82%8B5%E3%81%A4%E3%81%AE%E3%81%93%E3%81%A8">メールで相談</a><a class="mobile-contact-line" href="https://lin.ee/QPi1J5m" target="_blank" rel="noopener">LINEで相談</a></aside>
+</body>
+</html>
